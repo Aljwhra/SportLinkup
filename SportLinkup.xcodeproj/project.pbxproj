@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2417A492B396D2600D89723 /* SportLinkupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A482B396D2600D89723 /* SportLinkupApp.swift */; };
+		D2417A4B2B396D2600D89723 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A4A2B396D2600D89723 /* ContentView.swift */; };
+		D2417A4D2B396D2800D89723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2417A4C2B396D2800D89723 /* Assets.xcassets */; };
+		D2417A502B396D2800D89723 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2417A4F2B396D2800D89723 /* Preview Assets.xcassets */; };
+		D2417A5A2B396D9500D89723 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A572B396D9500D89723 /* SplashScreenView.swift */; };
+		D2417A5B2B396D9500D89723 /* OnboardingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A582B396D9500D89723 /* OnboardingItems.swift */; };
+		D2417A5C2B396D9500D89723 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A592B396D9500D89723 /* OnboardingView.swift */; };
+		D2417A622B396DB200D89723 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A5E2B396DB200D89723 /* ExploreView.swift */; };
+		D2417A632B396DB200D89723 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A5F2B396DB200D89723 /* SearchView.swift */; };
+		D2417A642B396DB200D89723 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A602B396DB200D89723 /* DetailsView.swift */; };
+		D2417A652B396DB200D89723 /* PlacesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A612B396DB200D89723 /* PlacesView.swift */; };
+		D2417A6B2B396DBB00D89723 /* HaderExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A672B396DBB00D89723 /* HaderExplore.swift */; };
+		D2417A6C2B396DBB00D89723 /* ButtonExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A682B396DBB00D89723 /* ButtonExplore.swift */; };
+		D2417A6D2B396DBB00D89723 /* CardPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A692B396DBB00D89723 /* CardPlaces.swift */; };
+		D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A6A2B396DBB00D89723 /* CardExplore.swift */; };
+		D2417A702B39703100D89723 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A6F2B39703100D89723 /* BookingView.swift */; };
+		D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A712B397C1A00D89723 /* CalendarView.swift */; };
+		D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A732B3990FE00D89723 /* PlayersStepper.swift */; };
+		D2417A762B399C9F00D89723 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A752B399C9F00D89723 /* Time.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2417A452B396D2600D89723 /* SportLinkup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportLinkup.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2417A482B396D2600D89723 /* SportLinkupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportLinkupApp.swift; sourceTree = "<group>"; };
+		D2417A4A2B396D2600D89723 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D2417A4C2B396D2800D89723 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D2417A4F2B396D2800D89723 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D2417A572B396D9500D89723 /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		D2417A582B396D9500D89723 /* OnboardingItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingItems.swift; sourceTree = "<group>"; };
+		D2417A592B396D9500D89723 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D2417A5E2B396DB200D89723 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		D2417A5F2B396DB200D89723 /* SearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		D2417A602B396DB200D89723 /* DetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		D2417A612B396DB200D89723 /* PlacesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesView.swift; sourceTree = "<group>"; };
+		D2417A672B396DBB00D89723 /* HaderExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaderExplore.swift; sourceTree = "<group>"; };
+		D2417A682B396DBB00D89723 /* ButtonExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExplore.swift; sourceTree = "<group>"; };
+		D2417A692B396DBB00D89723 /* CardPlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPlaces.swift; sourceTree = "<group>"; };
+		D2417A6A2B396DBB00D89723 /* CardExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExplore.swift; sourceTree = "<group>"; };
+		D2417A6F2B39703100D89723 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
+		D2417A712B397C1A00D89723 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		D2417A732B3990FE00D89723 /* PlayersStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersStepper.swift; sourceTree = "<group>"; };
+		D2417A752B399C9F00D89723 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2417A422B396D2600D89723 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2417A3C2B396D2600D89723 = {
+			isa = PBXGroup;
+			children = (
+				D2417A472B396D2600D89723 /* SportLinkup */,
+				D2417A462B396D2600D89723 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2417A462B396D2600D89723 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A452B396D2600D89723 /* SportLinkup.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2417A472B396D2600D89723 /* SportLinkup */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A482B396D2600D89723 /* SportLinkupApp.swift */,
+				D2417A4A2B396D2600D89723 /* ContentView.swift */,
+				D2417A562B396D9500D89723 /* Onboarding */,
+				D2417A5D2B396DB200D89723 /* Views */,
+				D2417A662B396DBB00D89723 /* Components */,
+				D2417A4C2B396D2800D89723 /* Assets.xcassets */,
+				D2417A4E2B396D2800D89723 /* Preview Content */,
+			);
+			path = SportLinkup;
+			sourceTree = "<group>";
+		};
+		D2417A4E2B396D2800D89723 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A4F2B396D2800D89723 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D2417A562B396D9500D89723 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A572B396D9500D89723 /* SplashScreenView.swift */,
+				D2417A582B396D9500D89723 /* OnboardingItems.swift */,
+				D2417A592B396D9500D89723 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		D2417A5D2B396DB200D89723 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A5E2B396DB200D89723 /* ExploreView.swift */,
+				D2417A5F2B396DB200D89723 /* SearchView.swift */,
+				D2417A602B396DB200D89723 /* DetailsView.swift */,
+				D2417A612B396DB200D89723 /* PlacesView.swift */,
+				D2417A6F2B39703100D89723 /* BookingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D2417A662B396DBB00D89723 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A672B396DBB00D89723 /* HaderExplore.swift */,
+				D2417A682B396DBB00D89723 /* ButtonExplore.swift */,
+				D2417A692B396DBB00D89723 /* CardPlaces.swift */,
+				D2417A6A2B396DBB00D89723 /* CardExplore.swift */,
+				D2417A712B397C1A00D89723 /* CalendarView.swift */,
+				D2417A732B3990FE00D89723 /* PlayersStepper.swift */,
+				D2417A752B399C9F00D89723 /* Time.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2417A442B396D2600D89723 /* SportLinkup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2417A532B396D2800D89723 /* Build configuration list for PBXNativeTarget "SportLinkup" */;
+			buildPhases = (
+				D2417A412B396D2600D89723 /* Sources */,
+				D2417A422B396D2600D89723 /* Frameworks */,
+				D2417A432B396D2600D89723 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SportLinkup;
+			productName = SportLinkup;
+			productReference = D2417A452B396D2600D89723 /* SportLinkup.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2417A3D2B396D2600D89723 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					D2417A442B396D2600D89723 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = D2417A402B396D2600D89723 /* Build configuration list for PBXProject "SportLinkup" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D2417A3C2B396D2600D89723;
+			productRefGroup = D2417A462B396D2600D89723 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2417A442B396D2600D89723 /* SportLinkup */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2417A432B396D2600D89723 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2417A502B396D2800D89723 /* Preview Assets.xcassets in Resources */,
+				D2417A4D2B396D2800D89723 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2417A412B396D2600D89723 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2417A4B2B396D2600D89723 /* ContentView.swift in Sources */,
+				D2417A5B2B396D9500D89723 /* OnboardingItems.swift in Sources */,
+				D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */,
+				D2417A702B39703100D89723 /* BookingView.swift in Sources */,
+				D2417A492B396D2600D89723 /* SportLinkupApp.swift in Sources */,
+				D2417A762B399C9F00D89723 /* Time.swift in Sources */,
+				D2417A652B396DB200D89723 /* PlacesView.swift in Sources */,
+				D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */,
+				D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */,
+				D2417A6B2B396DBB00D89723 /* HaderExplore.swift in Sources */,
+				D2417A6D2B396DBB00D89723 /* CardPlaces.swift in Sources */,
+				D2417A632B396DB200D89723 /* SearchView.swift in Sources */,
+				D2417A6C2B396DBB00D89723 /* ButtonExplore.swift in Sources */,
+				D2417A5C2B396D9500D89723 /* OnboardingView.swift in Sources */,
+				D2417A642B396DB200D89723 /* DetailsView.swift in Sources */,
+				D2417A622B396DB200D89723 /* ExploreView.swift in Sources */,
+				D2417A5A2B396D9500D89723 /* SplashScreenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D2417A512B396D2800D89723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D2417A522B396D2800D89723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2417A542B396D2800D89723 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SportLinkup/Preview Content\"";
+				DEVELOPMENT_TEAM = VL567NGX26;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aljwhra.SportLinkup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D2417A552B396D2800D89723 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SportLinkup/Preview Content\"";
+				DEVELOPMENT_TEAM = VL567NGX26;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aljwhra.SportLinkup;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2417A402B396D2600D89723 /* Build configuration list for PBXProject "SportLinkup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2417A512B396D2800D89723 /* Debug */,
+				D2417A522B396D2800D89723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2417A532B396D2800D89723 /* Build configuration list for PBXNativeTarget "SportLinkup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2417A542B396D2800D89723 /* Debug */,
+				D2417A552B396D2800D89723 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2417A3D2B396D2600D89723 /* Project object */;
+}
