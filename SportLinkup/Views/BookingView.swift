@@ -9,6 +9,8 @@ import SwiftUI
 
 struct BookingView: View {
     
+    @State var isNext = false
+    
     @Environment(\.dismiss) var dismiss
     
     let arryTime = [
@@ -90,11 +92,13 @@ struct BookingView: View {
                 HStack(alignment: .center, spacing: 0) {
                     Button(action: {
                         
-                    
+                    isNext = true
                         
                     }, label: {
                         Text("Next")
-                    })
+                    }).fullScreenCover(isPresented: $isNext) {
+                        AddCardTopayView()
+                    }
                 }
                 .padding(.leading, 123)
                 .padding(.trailing, 122)

@@ -26,6 +26,21 @@
 		D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A712B397C1A00D89723 /* CalendarView.swift */; };
 		D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A732B3990FE00D89723 /* PlayersStepper.swift */; };
 		D2417A762B399C9F00D89723 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A752B399C9F00D89723 /* Time.swift */; };
+		D2417A7A2B3ABAB100D89723 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A782B3ABAB100D89723 /* EditProfileView.swift */; };
+		D2417A7B2B3ABAB100D89723 /* SupabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A792B3ABAB100D89723 /* SupabaseHelper.swift */; };
+		D2417A7E2B3ABC1D00D89723 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A7D2B3ABC1D00D89723 /* User.swift */; };
+		D2417A802B3ABC2D00D89723 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A7F2B3ABC2D00D89723 /* Card.swift */; };
+		D2417A842B3ABC9700D89723 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A832B3ABC9700D89723 /* CustomDatePicker.swift */; };
+		D2417A862B3ABCA600D89723 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A852B3ABCA600D89723 /* CustomTextField.swift */; };
+		D2417A892B3ABD7700D89723 /* EditProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A882B3ABD7700D89723 /* EditProfileViewViewModel.swift */; };
+		D2417A8B2B3ABDC900D89723 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A8A2B3ABDC900D89723 /* CardView.swift */; };
+		D2417A8D2B3ABDDB00D89723 /* TermsConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A8C2B3ABDDB00D89723 /* TermsConditionsView.swift */; };
+		D2417A8F2B3ABDEE00D89723 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A8E2B3ABDEE00D89723 /* CustomTabView.swift */; };
+		D2417A912B3ABE0C00D89723 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A902B3ABE0C00D89723 /* AuthService.swift */; };
+		D2417A932B3ABF0A00D89723 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A922B3ABF0A00D89723 /* LocationMapView.swift */; };
+		D2417A952B3AC00200D89723 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A942B3AC00200D89723 /* ProfileView.swift */; };
+		D2417A972B3AC3FE00D89723 /* CardPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A962B3AC3FE00D89723 /* CardPlacesModel.swift */; };
+		D2417A992B3AC55B00D89723 /* AddCardTopayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +64,21 @@
 		D2417A712B397C1A00D89723 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		D2417A732B3990FE00D89723 /* PlayersStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersStepper.swift; sourceTree = "<group>"; };
 		D2417A752B399C9F00D89723 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
+		D2417A782B3ABAB100D89723 /* EditProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		D2417A792B3ABAB100D89723 /* SupabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupabaseHelper.swift; sourceTree = "<group>"; };
+		D2417A7D2B3ABC1D00D89723 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D2417A7F2B3ABC2D00D89723 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		D2417A832B3ABC9700D89723 /* CustomDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		D2417A852B3ABCA600D89723 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		D2417A882B3ABD7700D89723 /* EditProfileViewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewViewModel.swift; sourceTree = "<group>"; };
+		D2417A8A2B3ABDC900D89723 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D2417A8C2B3ABDDB00D89723 /* TermsConditionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsConditionsView.swift; sourceTree = "<group>"; };
+		D2417A8E2B3ABDEE00D89723 /* CustomTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		D2417A902B3ABE0C00D89723 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D2417A922B3ABF0A00D89723 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
+		D2417A942B3AC00200D89723 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D2417A962B3AC3FE00D89723 /* CardPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacesModel.swift; sourceTree = "<group>"; };
+		D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardTopayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +113,10 @@
 			children = (
 				D2417A482B396D2600D89723 /* SportLinkupApp.swift */,
 				D2417A4A2B396D2600D89723 /* ContentView.swift */,
+				D2417A872B3ABD5200D89723 /* ViewModel */,
+				D2417A822B3ABC7500D89723 /* Custom */,
 				D2417A562B396D9500D89723 /* Onboarding */,
+				D2417A7C2B3ABC0600D89723 /* Model */,
 				D2417A5D2B396DB200D89723 /* Views */,
 				D2417A662B396DBB00D89723 /* Components */,
 				D2417A4C2B396D2800D89723 /* Assets.xcassets */,
@@ -118,6 +151,10 @@
 				D2417A602B396DB200D89723 /* DetailsView.swift */,
 				D2417A612B396DB200D89723 /* PlacesView.swift */,
 				D2417A6F2B39703100D89723 /* BookingView.swift */,
+				D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */,
+				D2417A922B3ABF0A00D89723 /* LocationMapView.swift */,
+				D2417A942B3AC00200D89723 /* ProfileView.swift */,
+				D2417A772B3ABAB100D89723 /* Profile */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -132,8 +169,48 @@
 				D2417A712B397C1A00D89723 /* CalendarView.swift */,
 				D2417A732B3990FE00D89723 /* PlayersStepper.swift */,
 				D2417A752B399C9F00D89723 /* Time.swift */,
+				D2417A8A2B3ABDC900D89723 /* CardView.swift */,
+				D2417A8C2B3ABDDB00D89723 /* TermsConditionsView.swift */,
+				D2417A8E2B3ABDEE00D89723 /* CustomTabView.swift */,
+				D2417A902B3ABE0C00D89723 /* AuthService.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D2417A772B3ABAB100D89723 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A782B3ABAB100D89723 /* EditProfileView.swift */,
+				D2417A792B3ABAB100D89723 /* SupabaseHelper.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D2417A7C2B3ABC0600D89723 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A7D2B3ABC1D00D89723 /* User.swift */,
+				D2417A7F2B3ABC2D00D89723 /* Card.swift */,
+				D2417A962B3AC3FE00D89723 /* CardPlacesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D2417A822B3ABC7500D89723 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A832B3ABC9700D89723 /* CustomDatePicker.swift */,
+				D2417A852B3ABCA600D89723 /* CustomTextField.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		D2417A872B3ABD5200D89723 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D2417A882B3ABD7700D89723 /* EditProfileViewViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,23 +283,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2417A932B3ABF0A00D89723 /* LocationMapView.swift in Sources */,
+				D2417A7A2B3ABAB100D89723 /* EditProfileView.swift in Sources */,
 				D2417A4B2B396D2600D89723 /* ContentView.swift in Sources */,
+				D2417A842B3ABC9700D89723 /* CustomDatePicker.swift in Sources */,
 				D2417A5B2B396D9500D89723 /* OnboardingItems.swift in Sources */,
+				D2417A862B3ABCA600D89723 /* CustomTextField.swift in Sources */,
 				D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */,
 				D2417A702B39703100D89723 /* BookingView.swift in Sources */,
+				D2417A892B3ABD7700D89723 /* EditProfileViewViewModel.swift in Sources */,
 				D2417A492B396D2600D89723 /* SportLinkupApp.swift in Sources */,
 				D2417A762B399C9F00D89723 /* Time.swift in Sources */,
 				D2417A652B396DB200D89723 /* PlacesView.swift in Sources */,
+				D2417A972B3AC3FE00D89723 /* CardPlacesModel.swift in Sources */,
+				D2417A7E2B3ABC1D00D89723 /* User.swift in Sources */,
 				D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */,
 				D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */,
+				D2417A8B2B3ABDC900D89723 /* CardView.swift in Sources */,
 				D2417A6B2B396DBB00D89723 /* HaderExplore.swift in Sources */,
 				D2417A6D2B396DBB00D89723 /* CardPlaces.swift in Sources */,
 				D2417A632B396DB200D89723 /* SearchView.swift in Sources */,
 				D2417A6C2B396DBB00D89723 /* ButtonExplore.swift in Sources */,
 				D2417A5C2B396D9500D89723 /* OnboardingView.swift in Sources */,
+				D2417A8D2B3ABDDB00D89723 /* TermsConditionsView.swift in Sources */,
+				D2417A952B3AC00200D89723 /* ProfileView.swift in Sources */,
+				D2417A802B3ABC2D00D89723 /* Card.swift in Sources */,
 				D2417A642B396DB200D89723 /* DetailsView.swift in Sources */,
 				D2417A622B396DB200D89723 /* ExploreView.swift in Sources */,
+				D2417A8F2B3ABDEE00D89723 /* CustomTabView.swift in Sources */,
+				D2417A992B3AC55B00D89723 /* AddCardTopayView.swift in Sources */,
 				D2417A5A2B396D9500D89723 /* SplashScreenView.swift in Sources */,
+				D2417A7B2B3ABAB100D89723 /* SupabaseHelper.swift in Sources */,
+				D2417A912B3ABE0C00D89723 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
