@@ -14,7 +14,6 @@ struct CustomTabView: View {
         case home
         case map
         case scanner
-//        case search
         case profile
         
         var icon: String {
@@ -25,8 +24,6 @@ struct CustomTabView: View {
                 return "img2"
             case .scanner:
                 return "barcode"
-//            case .search:
-//                return "Search"
             case .profile:
                 return "Per"
             }
