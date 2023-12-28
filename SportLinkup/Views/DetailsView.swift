@@ -45,12 +45,10 @@ struct DetailsView: View {
                 
                 ForEach(vm.sports){ detail in
                     if detail.id == sportId{
-                        NavigationLink(
-                            destination: BookingView(),
-                            label: {
+                    
                                 Details(details: detail)
                                 
-                            })
+                            }
                         
                     }
                 }
@@ -105,7 +103,7 @@ struct DetailsView: View {
             .navigationBarBackButtonHidden(true)
         }
     }
-}
+
 
 #Preview {
     DetailsView(sportTitle: "", sportId: UUID())
