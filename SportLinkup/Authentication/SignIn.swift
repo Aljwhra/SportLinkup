@@ -112,9 +112,6 @@ struct SignIn: View {
       
         }
      }
-
-
-    
     
 }
 

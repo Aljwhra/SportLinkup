@@ -15,8 +15,10 @@ struct ExploreView: View {
     let cardExploreArry = [
         CardExplore(imageName: "Bike2", title: "Cycling"),
         CardExplore(imageName: "Tennis2", title: "Padel courts"),
-        CardExplore(imageName: "Soccer2", title: "soccer fields"),
-        CardExplore(imageName: "Run", title: "Run")
+        CardExplore(imageName: "Soccer2", title: "Soccer Fields"),
+        CardExplore(imageName: "Run", title: "Walking"),
+        CardExplore(imageName: "Gym", title: "Fitness Equipment")
+        
     ]
     
     var body: some View {
@@ -28,7 +30,8 @@ struct ExploreView: View {
                 
                 ButtonExplore()
                 
-                ScrollView{
+                ScrollView(showsIndicators: false ){
+                    
                     VStack(spacing:19){
                         ForEach(cardExploreArry) { explore in
                             NavigationLink(
@@ -37,9 +40,9 @@ struct ExploreView: View {
                                     explore
                                         
                                 })
-                            
                         }
                     }
+                   
                 }
                 .padding(.top)
                 

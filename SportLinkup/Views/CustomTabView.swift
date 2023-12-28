@@ -66,7 +66,7 @@ struct CustomTabView: View {
                                 Image(tab.icon)
                                     .resizable()
                                     .frame(width: 16, height: 16 )
-                                    //.foregroundStyle(.black)
+                                   
                                   
                             }
                         }
