@@ -39,12 +39,21 @@
 		D2417A912B3ABE0C00D89723 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A902B3ABE0C00D89723 /* AuthService.swift */; };
 		D2417A932B3ABF0A00D89723 /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A922B3ABF0A00D89723 /* LocationMapView.swift */; };
 		D2417A952B3AC00200D89723 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A942B3AC00200D89723 /* ProfileView.swift */; };
-		D2417A972B3AC3FE00D89723 /* CardPlacesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A962B3AC3FE00D89723 /* CardPlacesModel.swift */; };
+		D2417A972B3AC3FE00D89723 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A962B3AC3FE00D89723 /* Sport.swift */; };
 		D2417A992B3AC55B00D89723 /* AddCardTopayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */; };
 		D2417A9B2B3AF43500D89723 /* PadelDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A9A2B3AF43500D89723 /* PadelDetailsView.swift */; };
 		D2417A9D2B3AF45200D89723 /* Padel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A9C2B3AF45200D89723 /* Padel.swift */; };
 		D2417AA02B3AF52A00D89723 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A9F2B3AF52A00D89723 /* SignIn.swift */; };
 		D2417AA22B3AF53100D89723 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417AA12B3AF53100D89723 /* CreateAccount.swift */; };
+		D2417AA42B3AF76900D89723 /* MyBookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417AA32B3AF76900D89723 /* MyBookingView.swift */; };
+		D24CBB7C2B3C40B8006EB25F /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB7B2B3C40B8006EB25F /* Details.swift */; };
+		D24CBB7E2B3D3324006EB25F /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB7D2B3D3324006EB25F /* Activities.swift */; };
+		D24CBB802B3D36E1006EB25F /* CardActivities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB7F2B3D36E1006EB25F /* CardActivities.swift */; };
+		D24CBB822B3D39CE006EB25F /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB812B3D39CE006EB25F /* ActivitiesView.swift */; };
+		D24CBB842B3D3B2A006EB25F /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */; };
+		D24D587C2B3D75ED00F65EFF /* ActivitieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */; };
+		D24D587E2B3D889E00F65EFF /* ActivitieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */; };
+		D2F001B92B3BAE8800A91C7C /* SportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,12 +90,21 @@
 		D2417A902B3ABE0C00D89723 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		D2417A922B3ABF0A00D89723 /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		D2417A942B3AC00200D89723 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		D2417A962B3AC3FE00D89723 /* CardPlacesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardPlacesModel.swift; sourceTree = "<group>"; };
+		D2417A962B3AC3FE00D89723 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sport.swift; sourceTree = "<group>"; };
 		D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCardTopayView.swift; sourceTree = "<group>"; };
 		D2417A9A2B3AF43500D89723 /* PadelDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PadelDetailsView.swift; sourceTree = "<group>"; };
 		D2417A9C2B3AF45200D89723 /* Padel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Padel.swift; sourceTree = "<group>"; };
 		D2417A9F2B3AF52A00D89723 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		D2417AA12B3AF53100D89723 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
+		D2417AA32B3AF76900D89723 /* MyBookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBookingView.swift; sourceTree = "<group>"; };
+		D24CBB7B2B3C40B8006EB25F /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		D24CBB7D2B3D3324006EB25F /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		D24CBB7F2B3D36E1006EB25F /* CardActivities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardActivities.swift; sourceTree = "<group>"; };
+		D24CBB812B3D39CE006EB25F /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
+		D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetailsView.swift; sourceTree = "<group>"; };
+		D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetails.swift; sourceTree = "<group>"; };
+		D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +140,9 @@
 				D2417A482B396D2600D89723 /* SportLinkupApp.swift */,
 				D2417A4A2B396D2600D89723 /* ContentView.swift */,
 				D2417A9E2B3AF4E700D89723 /* Authentication */,
-				D2417A872B3ABD5200D89723 /* ViewModel */,
 				D2417A822B3ABC7500D89723 /* Custom */,
 				D2417A562B396D9500D89723 /* Onboarding */,
+				D2417A872B3ABD5200D89723 /* ViewModel */,
 				D2417A7C2B3ABC0600D89723 /* Model */,
 				D2417A5D2B396DB200D89723 /* Views */,
 				D2417A662B396DBB00D89723 /* Components */,
@@ -157,13 +175,17 @@
 			children = (
 				D2417A5E2B396DB200D89723 /* ExploreView.swift */,
 				D2417A5F2B396DB200D89723 /* SearchView.swift */,
-				D2417A602B396DB200D89723 /* DetailsView.swift */,
 				D2417A612B396DB200D89723 /* PlacesView.swift */,
+				D2417A602B396DB200D89723 /* DetailsView.swift */,
+				D24CBB812B3D39CE006EB25F /* ActivitiesView.swift */,
+				D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */,
 				D2417A6F2B39703100D89723 /* BookingView.swift */,
 				D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */,
 				D2417A922B3ABF0A00D89723 /* LocationMapView.swift */,
 				D2417A942B3AC00200D89723 /* ProfileView.swift */,
 				D2417A9A2B3AF43500D89723 /* PadelDetailsView.swift */,
+				D2417AA32B3AF76900D89723 /* MyBookingView.swift */,
+				D2417A8E2B3ABDEE00D89723 /* CustomTabView.swift */,
 				D2417A772B3ABAB100D89723 /* Profile */,
 			);
 			path = Views;
@@ -181,8 +203,10 @@
 				D2417A752B399C9F00D89723 /* Time.swift */,
 				D2417A8A2B3ABDC900D89723 /* CardView.swift */,
 				D2417A8C2B3ABDDB00D89723 /* TermsConditionsView.swift */,
-				D2417A8E2B3ABDEE00D89723 /* CustomTabView.swift */,
 				D2417A902B3ABE0C00D89723 /* AuthService.swift */,
+				D24CBB7B2B3C40B8006EB25F /* Details.swift */,
+				D24CBB7F2B3D36E1006EB25F /* CardActivities.swift */,
+				D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -201,7 +225,8 @@
 			children = (
 				D2417A7D2B3ABC1D00D89723 /* User.swift */,
 				D2417A7F2B3ABC2D00D89723 /* Card.swift */,
-				D2417A962B3AC3FE00D89723 /* CardPlacesModel.swift */,
+				D2417A962B3AC3FE00D89723 /* Sport.swift */,
+				D24CBB7D2B3D3324006EB25F /* Activities.swift */,
 				D2417A9C2B3AF45200D89723 /* Padel.swift */,
 			);
 			path = Model;
@@ -220,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				D2417A882B3ABD7700D89723 /* EditProfileViewViewModel.swift */,
+				D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */,
+				D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -305,18 +332,24 @@
 			files = (
 				D2417A932B3ABF0A00D89723 /* LocationMapView.swift in Sources */,
 				D2417A7A2B3ABAB100D89723 /* EditProfileView.swift in Sources */,
+				D24D587E2B3D889E00F65EFF /* ActivitieDetails.swift in Sources */,
 				D2417A4B2B396D2600D89723 /* ContentView.swift in Sources */,
+				D24CBB842B3D3B2A006EB25F /* ActivitiesViewModel.swift in Sources */,
+				D24D587C2B3D75ED00F65EFF /* ActivitieDetailsView.swift in Sources */,
 				D2417A842B3ABC9700D89723 /* CustomDatePicker.swift in Sources */,
 				D2417A5B2B396D9500D89723 /* OnboardingItems.swift in Sources */,
 				D2417A862B3ABCA600D89723 /* CustomTextField.swift in Sources */,
 				D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */,
 				D2417AA22B3AF53100D89723 /* CreateAccount.swift in Sources */,
+				D24CBB7E2B3D3324006EB25F /* Activities.swift in Sources */,
+				D24CBB7C2B3C40B8006EB25F /* Details.swift in Sources */,
 				D2417A702B39703100D89723 /* BookingView.swift in Sources */,
+				D24CBB802B3D36E1006EB25F /* CardActivities.swift in Sources */,
 				D2417A892B3ABD7700D89723 /* EditProfileViewViewModel.swift in Sources */,
 				D2417A492B396D2600D89723 /* SportLinkupApp.swift in Sources */,
 				D2417A762B399C9F00D89723 /* Time.swift in Sources */,
 				D2417A652B396DB200D89723 /* PlacesView.swift in Sources */,
-				D2417A972B3AC3FE00D89723 /* CardPlacesModel.swift in Sources */,
+				D2417A972B3AC3FE00D89723 /* Sport.swift in Sources */,
 				D2417A7E2B3ABC1D00D89723 /* User.swift in Sources */,
 				D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */,
 				D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */,
@@ -326,11 +359,14 @@
 				D2417A632B396DB200D89723 /* SearchView.swift in Sources */,
 				D2417A6C2B396DBB00D89723 /* ButtonExplore.swift in Sources */,
 				D2417A5C2B396D9500D89723 /* OnboardingView.swift in Sources */,
+				D2F001B92B3BAE8800A91C7C /* SportViewModel.swift in Sources */,
 				D2417A9D2B3AF45200D89723 /* Padel.swift in Sources */,
+				D2417AA42B3AF76900D89723 /* MyBookingView.swift in Sources */,
 				D2417A8D2B3ABDDB00D89723 /* TermsConditionsView.swift in Sources */,
 				D2417A952B3AC00200D89723 /* ProfileView.swift in Sources */,
 				D2417A802B3ABC2D00D89723 /* Card.swift in Sources */,
 				D2417A642B396DB200D89723 /* DetailsView.swift in Sources */,
+				D24CBB822B3D39CE006EB25F /* ActivitiesView.swift in Sources */,
 				D2417A9B2B3AF43500D89723 /* PadelDetailsView.swift in Sources */,
 				D2417A622B396DB200D89723 /* ExploreView.swift in Sources */,
 				D2417A8F2B3ABDEE00D89723 /* CustomTabView.swift in Sources */,

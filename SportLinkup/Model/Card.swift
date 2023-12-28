@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 struct Card: Codable, Identifiable {
     var id: Int
     let card_holder: String

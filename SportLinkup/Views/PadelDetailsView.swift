@@ -75,6 +75,7 @@ struct PadelDetailsView: View {
                         withAnimation {
                             showLoginAlert.toggle()
                         }
+                        
                     }) {
                         Text("Book")
                             .frame(maxWidth: .infinity)

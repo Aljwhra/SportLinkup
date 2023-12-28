@@ -16,8 +16,6 @@ struct Time: View, Identifiable {
     var body: some View  {
         
       
-            
-          
                 VStack {
                     Text(time)
                   

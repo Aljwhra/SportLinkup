@@ -100,13 +100,12 @@ struct BookingView: View {
                         AddCardTopayView()
                     }
                 }
-                .padding(.leading, 123)
-                .padding(.trailing, 122)
-                .padding(.vertical, 10)
-                .frame(width: 370, alignment: .center)
-                .background(Color(red: 0.82, green: 0.91, blue: 0.91))
+                .frame(maxWidth: .infinity)
+                .padding(16)
+                .background(Color.mygreen)
                 .cornerRadius(10)
-            }
+                .padding(.top, 45)
+            }.padding(11)
             .padding(.top)
         }
     }

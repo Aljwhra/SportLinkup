@@ -42,7 +42,7 @@ struct ButtonExplore: View {
                     selected = 1
                 }
             }, label: {
-                Text("Mane")
+                Text("Public")
                   .fontWeight(.semibold)
                   .foregroundColor(.black)
                   .padding(.horizontal,25)
@@ -63,7 +63,7 @@ struct ButtonExplore: View {
                     selected = 2
                 }
             }, label: {
-                Text("Wamen")
+                Text("Private")
                   .fontWeight(.semibold)
                   .foregroundColor(.black)
                   .padding(.horizontal,25)

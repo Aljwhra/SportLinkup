@@ -11,41 +11,40 @@ import SwiftUI
 struct CustomTabView: View {
     
     enum Tab: String, CaseIterable {
-        case home
-        case map
-        case scanner
-        case profile
+        case Home
+        case Map
+        case Activities
+        case Profile
         
         var icon: String {
             switch self {
-            case .home:
+            case .Home:
                 return "home"
-            case .map:
+            case .Map:
                 return "img2"
-            case .scanner:
+            case .Activities:
                 return "barcode"
-            case .profile:
+            case .Profile:
                 return "Per"
             }
         }
     }
     
-    @State var selectedTab: Tab = .home
+    @State var selectedTab: Tab = .Home
     var body: some View {
         NavigationStack {
             ZStack(alignment: .bottom) {
                 
                 ZStack {
                     switch selectedTab {
-                    case .home:
+                    case .Home:
                       ExploreView()
-                    case .map:
+                    case .Map:
                        LocationMapView()
-                    case .scanner:
-                        Text("notification")
-
-                    case .profile:
-                ProfileView()
+                    case .Activities:
+                      ActivitiesView()
+                    case .Profile:
+                      ProfileView()
                     }
                 }
           
@@ -57,17 +56,17 @@ struct CustomTabView: View {
                     ForEach(Tab.allCases, id: \.self) { tab in
                         if selectedTab == tab {
                             Text(tab.rawValue)
-                                .foregroundStyle(.mygreen)
+                                .foregroundStyle(.black)
                         } else {
                             Button {
                                 withAnimation {
                                     selectedTab = tab
                                 }
                             } label: {
-                                Image( tab.icon)
+                                Image(tab.icon)
                                     .resizable()
                                     .frame(width: 16, height: 16 )
-                                    .foregroundStyle(.white)
+                                    //.foregroundStyle(.black)
                                   
                             }
                         }
@@ -80,7 +79,7 @@ struct CustomTabView: View {
              
                 .frame(maxWidth: .infinity)
                 .background(Color.mygreen)
-                .cornerRadius(12)
+                .cornerRadius(10)
                 .padding(.horizontal, 12)
             }
         }

@@ -11,6 +11,10 @@ import SwiftUI
 struct DetailsView: View {
     
     @Environment(\.dismiss) var dismiss
+    @StateObject var vm = SportViewModel()
+    
+    var sportTitle: String
+    var sportId: UUID
     
     var body: some View {
         NavigationStack{
@@ -28,7 +32,7 @@ struct DetailsView: View {
                     
                 }
                 
-                Text("Cycling")
+                Text(sportTitle)
                     .font(.title3)
                     .fontWeight(.semibold)
             }
@@ -36,56 +40,24 @@ struct DetailsView: View {
             .padding(.top)
             
             ScrollView {
-                VStack(spacing: 20){
-                    Image("IMG1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 350, height: 300)
-                        .cornerRadius(15)
-                    
-                    VStack(alignment: .leading, spacing: 15){
-                        Text("Ad-Diriyah walking")
-                            .font(
-                                Font.custom("Inter", size: 20)
-                                    .weight(.semibold)
-                            )
-                            .foregroundColor(.black)
-                            .frame(width: 189, alignment: .leading)
-                        Text("A special path for cycling\nand walking")
-                            .font(Font.custom("Inter", size: 16))
-                            .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
-                            .frame(width: 229, alignment: .leading)
-                        Text("Ad-Diriyah")
-                            .font(
-                                Font.custom("Inter", size: 20)
-                                    .weight(.medium)
-                            )
-                            .foregroundColor(Color(red: 0.04, green: 0.05, blue: 0.12))
-                            .frame(width: 142, alignment: .leading)
-                        Text("Al Faisaliyah, Diriyah \n13712")
-                            .font(Font.custom("Inter", size: 16))
-                            .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
-                            .frame(width: 229, alignment: .leading)
+                
+                ForEach(vm.sports){ detail in
+                    if detail.id == sportId{
+                        NavigationLink(
+                            destination: BookingView(),
+                            label: {
+                                Details(details: detail)
+                                
+                            })
                         
-                        Text("Time")
-                            .font(
-                                Font.custom("Inter", size: 20)
-                                    .weight(.semibold)
-                            )
-                            .foregroundColor(.black)
-                            .frame(width: 189, alignment: .leading)
-                        
-                        Text("Open For 24 hr")
-                            .font(Font.custom("Inter", size: 16))
-                            .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
-                            .frame(width: 229, alignment: .leading)
-                    }.frame(width: 340 ,alignment: .leading)
-                    
-                    
                 }
+            }
+                
+             
                 
                 
             }
+            
             HStack(alignment: .center, spacing: 0) {
                 Button(action: {
                     
@@ -97,13 +69,17 @@ struct DetailsView: View {
                 }, label: {
                     Text("See Location")
                 })
+                .frame(maxWidth: .infinity)
+                .padding(16)
+                .background(Color.mygreen)
+                .cornerRadius(10)
+               // .padding(.top, 45)
             }
-            .padding(.leading, 123)
-            .padding(.trailing, 122)
-            .padding(.vertical, 10)
-            .frame(width: 370, alignment: .center)
-            .background(Color(red: 0.82, green: 0.91, blue: 0.91))
-            .cornerRadius(10)
+            .padding(11)
+            .onAppear{
+                vm.fetchData()
+            }
+            
             
             .navigationBarBackButtonHidden(true)
         }
@@ -111,7 +87,7 @@ struct DetailsView: View {
 }
 
 #Preview {
-    DetailsView()
+    DetailsView(sportTitle: "", sportId: UUID())
 }
 
 

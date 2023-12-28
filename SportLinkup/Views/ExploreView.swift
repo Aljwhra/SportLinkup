@@ -9,11 +9,14 @@ import SwiftUI
 
 struct ExploreView: View {
     
-    let  cardExploreArry = [
+    
+    
+    
+    let cardExploreArry = [
         CardExplore(imageName: "Bike2", title: "Cycling"),
         CardExplore(imageName: "Tennis2", title: "Padel courts"),
         CardExplore(imageName: "Soccer2", title: "soccer fields"),
-        CardExplore(imageName: "Run", title: "Cycling")
+        CardExplore(imageName: "Run", title: "Run")
     ]
     
     var body: some View {
@@ -29,7 +32,7 @@ struct ExploreView: View {
                     VStack(spacing:19){
                         ForEach(cardExploreArry) { explore in
                             NavigationLink(
-                                destination: PlacesView(),
+                                destination: PlacesView(sportTitle: explore.title ),
                                 label: {
                                     explore
                                         

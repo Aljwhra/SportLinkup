@@ -10,17 +10,12 @@ import SwiftUI
 struct PlacesView: View {
     
     @Environment(\.dismiss) var dismiss
-    
-    let  cardPlacesArry = [
-        CardPlaces(imagName1: "IMG1", title: "Ad-Diriyah walking", suptitle: "A special path for walking and cycling", place: "Ad-Diriyah", imagName2: "3"),
-        CardPlaces(imagName1: "IMG1", title: "Ad-Diriyah walking", suptitle: "A special path for walking and cycling", place: "Ad-Diriyah", imagName2: "3"),
-        CardPlaces(imagName1: "IMG1", title: "Ad-Diriyah walking", suptitle: "A special path for walking and cycling", place: "Ad-Diriyah", imagName2: "3"),
-        CardPlaces(imagName1: "IMG1", title: "Ad-Diriyah walking", suptitle: "A special path for walking and cycling", place: "Ad-Diriyah", imagName2: "3")
-    ]
+    @StateObject var vm = SportViewModel()
+    var sportTitle: String
     
     var body: some View {
         NavigationStack{
-            HStack(spacing: 123){
+            HStack(spacing: 124){
                 
                 HStack{
                     Button{
@@ -34,7 +29,7 @@ struct PlacesView: View {
                     
                 }
                 
-                Text("Cycling")
+                Text(sportTitle)
                     .font(.title3)
                     .fontWeight(.semibold)
             }
@@ -47,29 +42,31 @@ struct PlacesView: View {
                     
                     
                     VStack(spacing: 16){
-                        ForEach(cardPlacesArry){ places in
-                            
-                            NavigationLink(
-                                destination: DetailsView(),
-                                label: {
-                                    places
-                                    
-                                })
+                        ForEach(vm.sports){ places in
+                            if places.typesport == sportTitle {
+                                NavigationLink(
+                                    destination: DetailsView(sportTitle: sportTitle, sportId:places.id),
+                                    label: {
+                                        CardPlaces(cardPlaces: places)
+                                        
+                                    })
+                            }
                         }
                     }
                     .padding(.top,3)
                 }
                 
-                
-                
                 .navigationBarBackButtonHidden(true)
                 
+            }
+            .onAppear{
+                vm.fetchData()
             }
         }
     }
 }
 
 #Preview {
-    PlacesView()
+    PlacesView(sportTitle: "")
 }
 

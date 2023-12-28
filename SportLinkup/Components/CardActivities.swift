@@ -1,24 +1,23 @@
 //
-//  CardPlaces.swift
+//  CardActivities.swift
 //  SportLinkup
 //
-//  Created by Aljwhra Alnasser on 24/12/2023.
+//  Created by Aljwhra Alnasser on 28/12/2023.
 //
 
 import SwiftUI
 
-struct CardPlaces: View {
-
+struct CardActivities: View {
     
-    var cardPlaces: Sport
+    var cardActivities : Activities
     
     var body: some View {
-        
+       
         HStack{
             
            
             
-            AsyncImage(url: cardPlaces.ImageName){ result in
+            AsyncImage(url: cardActivities.ImageName){ result in
                 
                 if let image = result.image{
                     image
@@ -37,23 +36,20 @@ struct CardPlaces: View {
                 
             VStack(alignment: .leading){
                 
-                Text(cardPlaces.titile)
+                Text(cardActivities.activitieName)
                     .fontWeight(.semibold)
                     .font(.title3)
                   
                 
-                Text(cardPlaces.supTitle)
+                Text(cardActivities.activitieDes)
                     .foregroundStyle(Color("mygreyText"))
                     .multilineTextAlignment(.leading)
                 
                 HStack{
-                    Text(cardPlaces.place)
+                    Text(cardActivities.place)
                         .foregroundStyle(Color("mygreyText"))
                     
-//                    Image("3")
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fill)
-//                        .frame(width: 17, height: 21)
+
                 }
             }
             .frame(width: 185, alignment: .leading)
@@ -63,12 +59,10 @@ struct CardPlaces: View {
           RoundedRectangle(cornerRadius: 15)
             .stroke(Color("mygreen"), lineWidth: 1.5)
         )
+    
     }
 }
 
 #Preview {
-    CardPlaces(cardPlaces:Sport(typesport: "ci", gender: "wamane",ImageName: URL(string: "https://lh3.googleusercontent.com/p/AF1QipP1gKjsOYYw7lhKh8HmhRg2DVx96xTJ0D5OIyyD=s1360-w1360-h1020")! , titile: "Ad-Diriyah walking", supTitle: "A special path for walking and cycling", place: "Ad", typePlace: "puplic", time: "24hr", date: "02/2/2024", location: "hhh", dcsPlace: "hh"))
+    CardActivities(cardActivities: Activities(ImageName:URL(string: "https://lh3.googleusercontent.com/p/AF1QipP1gKjsOYYw7lhKh8HmhRg2DVx96xTJ0D5OIyyD=s1360-w1360-h1020")!, activitieName: "Riyadh Marathon", activitieDes: "Third Edition The Saudi Sports ", supActivitieDes: "Third Edition The Saudi Sports for All Federation will hold the Riyadh Marathon ", place: "Riyadh", time: "on February 10, 2024", location: "a"))
 }
-
-
-            

@@ -14,11 +14,11 @@ struct OnboardingView: View {
     let onboardingItemsArry : [OnboardingItems] = [
         
         OnboardingItems(imageName: "Soccer",
-                        title: NSLocalizedString("You will find places\nSports easily",comment:" transulater ")),
+                        title:"You will find places\nSports easily"),
         OnboardingItems(imageName: "Tennis",
-                        title: NSLocalizedString("You can reserve the \nstadiums you want",comment:" transulater")),
+                        title:"You can reserve the \nstadiums you want"),
         OnboardingItems(imageName: "Bike",
-                        title: NSLocalizedString("You can discover sports\nvenues on the map",comment:" transulater "))
+                        title: "You can discover sports\nvenues on the map" )
         ]
     
     
@@ -70,7 +70,7 @@ struct OnboardingView: View {
                             
                         })
                         .fullScreenCover(isPresented: $isSkip){
-                            ExploreView()
+                            CustomTabView()
                         }
                     
                         
@@ -95,7 +95,7 @@ struct OnboardingView: View {
                             
                         })
                         .fullScreenCover(isPresented: $isStart){
-                            ExploreView()
+                          CustomTabView()
                         }
                     }
                 }
