@@ -12,14 +12,18 @@ struct ButtonExplore: View {
   
     @State private var selected: Int = 0
     
+    @Binding var selectedFilter: FilterType
+    
     var body: some View {
        
         HStack{
        
                 
                 Button(action: {
+                    selectedFilter = .All
                     withAnimation {
                         selected = 0
+                        
                     }
                 }, label: {
                     Text("All")
@@ -38,8 +42,10 @@ struct ButtonExplore: View {
                 
                
             Button(action: {
+                selectedFilter = .Public
                 withAnimation {
                     selected = 1
+                   
                 }
             }, label: {
                 Text("Public")
@@ -59,8 +65,10 @@ struct ButtonExplore: View {
             
             
             Button(action: {
+                selectedFilter = .Private
                 withAnimation {
                     selected = 2
+                  
                 }
             }, label: {
                 Text("Private")
@@ -83,10 +91,10 @@ struct ButtonExplore: View {
             
     }
 }
-
-#Preview {
-    ButtonExplore()
-}
+//
+//#Preview {
+//    ButtonExplore(selectedFilter: Binding<FilterType>)
+//}
 
 
 

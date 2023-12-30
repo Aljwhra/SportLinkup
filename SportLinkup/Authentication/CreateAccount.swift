@@ -14,6 +14,9 @@ struct CreateAccount: View {
     @State private var email = ""
     @State private var password = ""
     
+    @State var isSignIn = false
+    @State var isSignUp = false
+    
     @State var networking: Bool = false
     
     var body: some View {
@@ -35,7 +38,7 @@ struct CreateAccount: View {
 
                     .multilineTextAlignment(.leading)
                     .foregroundStyle(.gray)
-                   // .padding(.horizontal)
+                  
                     .padding(.top, 24)
                    
                 Text("Email")
@@ -64,33 +67,45 @@ struct CreateAccount: View {
                     .background(RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.mygreen, lineWidth: 1.5)
                     )
-                   // .padding(.top,44)
                 
-                Button(action: { signUp() }, label: {
+                
+                Button(action: { 
+                    signUp()
+                    isSignUp = true
+                    
+                }, label: {
                     Text("Sign Up")
                         .font(.title3).bold()
                         .foregroundStyle(.black)
                         .padding(.horizontal ,100)
                 })
+                
                 .frame(maxWidth: .infinity)
                 .padding(16)
                 .background(Color.mygreen)
                 .cornerRadius(10)
                 .padding(.top, 44)
+                .fullScreenCover(isPresented: $isSignUp) {
+                     CustomTabView()
+                }
+                
                 HStack {
                     Text("Do you have an account? ")
                         .foregroundStyle(Color.gray)
-                    Button("Sign In", action: {})
+                    Button("Sign In", action: {
+                        isSignIn = true
+                    })
                         .foregroundStyle(Color.mygreen)
+                        .fullScreenCover(isPresented: $isSignIn) {
+                            SignIn(didOnboard: $didOnboard )
+                        }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 44)
                 Spacer()
             }
             .padding(11)
-           
-       
-            //.padding(.top,300)
+        
             .edgesIgnoringSafeArea(.bottom)
             .padding(.top,50)
             

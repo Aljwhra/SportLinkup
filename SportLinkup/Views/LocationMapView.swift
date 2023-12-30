@@ -1,8 +1,8 @@
-//
+
 //  LocationMapView.swift
 //  SportLinkup
 //
-//  Created by Aljwhra Alnasser on 26/12/2023.
+//  Created by Raneem on 26/12/2023.
 //
 
 import SwiftUI
@@ -12,32 +12,77 @@ import MapKit
 struct LocationMapView: View {
     @StateObject private var locationViewModel = LocationViewModel()
 
-    // Add an array of places with coordinates and titles
-    let places: [Place] = [
-        Place(title: "Place 1", coordinate: CLLocationCoordinate2D(latitude: 24.7136, longitude: 46.6753)),
-        Place(title: "Place 2", coordinate: CLLocationCoordinate2D(latitude: 24.7236, longitude: 46.6853)),
-        Place(title: "Place 3", coordinate: CLLocationCoordinate2D(latitude: 24.7036, longitude: 46.6653))
-    ]
+    @State private var pins: [SportPin] = []
+
 
     @State private var selectedPlace: Place?
 
     var body: some View {
-        Map(coordinateRegion: $locationViewModel.region, showsUserLocation: true, annotationItems: places) { place in
-            MapPin(coordinate: place.coordinate, tint: .red)
-        }
-        .onAppear {
-            locationViewModel.requestLocation()
-        }
-        .onTapGesture {
-            // Get the tapped location
-            let tappedLocation = locationViewModel.tappedLocation
+        
+        VStack{
+            
+            Map(coordinateRegion: $locationViewModel.region, showsUserLocation: true, annotationItems: pins) { pin in
+                MapAnnotation(coordinate: .init(latitude: pin.lat, longitude: pin.lon)) {
+                    Image(systemName: pin.icon)
+                        .foregroundColor(.black)
+                        .padding()
+                        .background {
+                            Circle()
+                                .foregroundColor(.gray)
+                        }
+                        .shadow(radius: 1)
+                        .onTapGesture {
+                            navigate(lat: pin.lat, lon: pin.lon)
+                        }
+                }
+                
+                
+            }
+            
            
-          
-        }
-        .alert(item: $selectedPlace) { place in
-            Alert(title: Text(place.title), message: Text("Latitude: \(place.coordinate.latitude)\nLongitude: \(place.coordinate.longitude)"), dismissButton: .default(Text("OK")))
+            .onAppear {
+                locationViewModel.requestLocation()
+                fetch()
+            }
+            .onTapGesture {
+                // Get the tapped location
+                let tappedLocation = locationViewModel.tappedLocation
+                
+                
+            }
+            .alert(item: $selectedPlace) { place in
+                Alert(title: Text(place.title), message: Text("Latitude: \(place.coordinate.latitude)\nLongitude: \(place.coordinate.longitude)"), dismissButton: .default(Text("OK")))
+            }
         }
     }
+    
+    private func fetch() {
+        Task {
+            do {
+                let result: [SportPin] = try await SupabaseHelper.read(tableName: "Pins")
+                pins = result
+            } catch {
+                print(error)
+            }
+        }
+    }
+    
+    private func navigate(lat: Double, lon: Double) {
+        if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(lat),\(lon)&directionsmode=driving") {
+            if UIApplication.shared.canOpenURL(url) {
+                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                return
+            }
+        }
+        
+        if let url = URL(string: "maps://?saddr=&daddr=\(lat),\(lon)") {
+            if UIApplication.shared.canOpenURL(url) {
+                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                return
+            }
+        }
+    }
+        
 }
 
 struct Place: Identifiable {

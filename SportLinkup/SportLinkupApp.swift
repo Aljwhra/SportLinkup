@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SportLinkupApp: App {
+    
+    @ObservedObject var auth = AuthService.shared
+    
     var body: some Scene {
         WindowGroup {
           SplashScreenView()
+           // .preferredColorScheme(auth.isDarkMode ? .dark : .light)
         }
     }
 }

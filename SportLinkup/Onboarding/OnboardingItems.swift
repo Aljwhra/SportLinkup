@@ -12,7 +12,7 @@ struct OnboardingItems: View , Identifiable{
     var id = UUID()
     var imageName: String
     var title: String
-   // var subtitle: String
+   
    
     
     var body: some View {
@@ -27,7 +27,6 @@ struct OnboardingItems: View , Identifiable{
             
             Text(title)
                 .font(.title)
-              //  .font(Font.custom("Inter", size: 28))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
 

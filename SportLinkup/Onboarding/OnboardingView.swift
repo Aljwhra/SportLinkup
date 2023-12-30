@@ -10,6 +10,7 @@ import SwiftUI
 struct OnboardingView: View {
     
     @Environment(\.locale) var locale
+    @Binding var didOnboard: Bool
     
     let onboardingItemsArry : [OnboardingItems] = [
         
@@ -70,7 +71,7 @@ struct OnboardingView: View {
                             
                         })
                         .fullScreenCover(isPresented: $isSkip){
-                            CustomTabView()
+                            SignIn(didOnboard: $didOnboard)
                         }
                     
                         
@@ -95,7 +96,7 @@ struct OnboardingView: View {
                             
                         })
                         .fullScreenCover(isPresented: $isStart){
-                          CustomTabView()
+                            SignIn(didOnboard: $didOnboard)
                         }
                     }
                 }
@@ -105,5 +106,5 @@ struct OnboardingView: View {
 }
 
 #Preview {
-    OnboardingView()
+    OnboardingView(didOnboard:.constant(false) )
 }

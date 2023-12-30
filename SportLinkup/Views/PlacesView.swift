@@ -9,38 +9,16 @@ import SwiftUI
 
 struct PlacesView: View {
     
-    @Environment(\.dismiss) var dismiss
+  
     @StateObject var vm = SportViewModel()
+ 
+    
     var sportTitle: String
     
     var body: some View {
         NavigationStack{
-            HStack(spacing: 124){
-                
-                HStack{
-                    Button{
-                        
-                        dismiss()
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                            .font(.system(size: 20))
-                            .foregroundStyle(.black)
-                    }
-                    
-                }
-                
-                Text(sportTitle)
-                    .font(.title3)
-                    .fontWeight(.semibold)
-            }
-            .frame(width: 350,alignment: .leading)
-            .padding(.top)
-            
-            ScrollView{
-                
+            ScrollView(showsIndicators: false){
                 VStack{
-                    
-                    
                     VStack(spacing: 16){
                         ForEach(vm.sports){ places in
                             if places.typesport == sportTitle {
@@ -55,8 +33,9 @@ struct PlacesView: View {
                     }
                     .padding(.top,3)
                 }
-                
-                .navigationBarBackButtonHidden(true)
+                .navigationTitle(sportTitle)
+                .navigationBarBackButtonHidden(false)
+                .navigationBarTitleDisplayMode(.inline)
                 
             }
             .onAppear{

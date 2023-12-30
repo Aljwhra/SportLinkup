@@ -21,7 +21,7 @@ struct ActivitiesView: View {
                         .fontWeight(.semibold)
                 }.padding()
                 
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     VStack(spacing: 16){
                         ForEach(vm.activitie){ act in
                             NavigationLink(

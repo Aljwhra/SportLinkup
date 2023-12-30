@@ -17,7 +17,7 @@ struct SplashScreenView: View {
         ZStack{
             
             if isActive{
-                OnboardingView()
+                OnboardingView(didOnboard: .constant(false))
             }else {
                 Color("mygreen")
                     .ignoresSafeArea()

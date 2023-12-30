@@ -21,9 +21,9 @@ struct HaderExplore: View {
             
             Spacer()
             
-            Button(action: {
-                isSearch = true
-            }, label:{
+            NavigationLink(
+            destination: SearchView(),
+            label:{
                 Image(systemName: "magnifyingglass")
                     .foregroundStyle(.black)
                     .background(
@@ -33,9 +33,7 @@ struct HaderExplore: View {
                     )
             })
             .padding()
-            .fullScreenCover(isPresented: $isSearch){
-                SearchView()
-            }
+            
             
         }.padding()
     }
@@ -44,3 +42,5 @@ struct HaderExplore: View {
 #Preview {
     HaderExplore()
 }
+
+

@@ -51,7 +51,13 @@
 		D24CBB842B3D3B2A006EB25F /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */; };
 		D24D587C2B3D75ED00F65EFF /* ActivitieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */; };
 		D24D587E2B3D889E00F65EFF /* ActivitieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */; };
-		D24D58822B3D983B00F65EFF /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D58812B3D983B00F65EFF /* Booking.swift */; };
+		D2E9009B2B3F1C8E003C860A /* BookingTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */; };
+		D2E9009D2B3F2B12003C860A /* MyBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009C2B3F2B12003C860A /* MyBooking.swift */; };
+		D2E9009F2B3F2FFD003C860A /* PopupDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */; };
+		D2E900A12B3F57CC003C860A /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A02B3F57CC003C860A /* BookingViewModel.swift */; };
+		D2E900A32B3F61B5003C860A /* BookingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */; };
+		D2E900A72B3F8B3D003C860A /*  SportPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A62B3F8B3D003C860A /*  SportPin.swift */; };
+		D2E900A92B3FC493003C860A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D2E900A82B3FC493003C860A /* Localizable.xcstrings */; };
 		D2F001B92B3BAE8800A91C7C /* SportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +107,13 @@
 		D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
 		D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetailsView.swift; sourceTree = "<group>"; };
 		D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetails.swift; sourceTree = "<group>"; };
-		D24D58812B3D983B00F65EFF /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
+		D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTicket.swift; sourceTree = "<group>"; };
+		D2E9009C2B3F2B12003C860A /* MyBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooking.swift; sourceTree = "<group>"; };
+		D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDetailsView.swift; sourceTree = "<group>"; };
+		D2E900A02B3F57CC003C860A /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
+		D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryView.swift; sourceTree = "<group>"; };
+		D2E900A62B3F8B3D003C860A /*  SportPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " SportPin.swift"; sourceTree = "<group>"; };
+		D2E900A82B3FC493003C860A /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +157,7 @@
 				D2417A5D2B396DB200D89723 /* Views */,
 				D2417A662B396DBB00D89723 /* Components */,
 				D2417A4C2B396D2800D89723 /* Assets.xcassets */,
+				D2E900A82B3FC493003C860A /* Localizable.xcstrings */,
 				D2417A4E2B396D2800D89723 /* Preview Content */,
 			);
 			path = SportLinkup;
@@ -175,9 +188,11 @@
 				D2417A5F2B396DB200D89723 /* SearchView.swift */,
 				D2417A612B396DB200D89723 /* PlacesView.swift */,
 				D2417A602B396DB200D89723 /* DetailsView.swift */,
+				D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */,
 				D24CBB812B3D39CE006EB25F /* ActivitiesView.swift */,
 				D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */,
 				D2417A6F2B39703100D89723 /* BookingView.swift */,
+				D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */,
 				D2417A982B3AC55B00D89723 /* AddCardTopayView.swift */,
 				D2417A922B3ABF0A00D89723 /* LocationMapView.swift */,
 				D2417A942B3AC00200D89723 /* ProfileView.swift */,
@@ -204,7 +219,7 @@
 				D24CBB7B2B3C40B8006EB25F /* Details.swift */,
 				D24CBB7F2B3D36E1006EB25F /* CardActivities.swift */,
 				D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */,
-				D24D58812B3D983B00F65EFF /* Booking.swift */,
+				D2E9009C2B3F2B12003C860A /* MyBooking.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +240,8 @@
 				D2417A7F2B3ABC2D00D89723 /* Card.swift */,
 				D2417A962B3AC3FE00D89723 /* Sport.swift */,
 				D24CBB7D2B3D3324006EB25F /* Activities.swift */,
+				D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */,
+				D2E900A62B3F8B3D003C860A /*  SportPin.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,6 +261,7 @@
 				D2417A882B3ABD7700D89723 /* EditProfileViewViewModel.swift */,
 				D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */,
 				D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */,
+				D2E900A02B3F57CC003C860A /* BookingViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -317,6 +335,7 @@
 			files = (
 				D2417A502B396D2800D89723 /* Preview Assets.xcassets in Resources */,
 				D2417A4D2B396D2800D89723 /* Assets.xcassets in Resources */,
+				D2E900A92B3FC493003C860A /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2417A932B3ABF0A00D89723 /* LocationMapView.swift in Sources */,
+				D2E900A12B3F57CC003C860A /* BookingViewModel.swift in Sources */,
 				D2417A7A2B3ABAB100D89723 /* EditProfileView.swift in Sources */,
+				D2E9009B2B3F1C8E003C860A /* BookingTicket.swift in Sources */,
 				D24D587E2B3D889E00F65EFF /* ActivitieDetails.swift in Sources */,
 				D2417A4B2B396D2600D89723 /* ContentView.swift in Sources */,
 				D24CBB842B3D3B2A006EB25F /* ActivitiesViewModel.swift in Sources */,
@@ -342,11 +363,13 @@
 				D24CBB7C2B3C40B8006EB25F /* Details.swift in Sources */,
 				D2417A702B39703100D89723 /* BookingView.swift in Sources */,
 				D24CBB802B3D36E1006EB25F /* CardActivities.swift in Sources */,
+				D2E9009D2B3F2B12003C860A /* MyBooking.swift in Sources */,
 				D2417A892B3ABD7700D89723 /* EditProfileViewViewModel.swift in Sources */,
 				D2417A492B396D2600D89723 /* SportLinkupApp.swift in Sources */,
 				D2417A762B399C9F00D89723 /* Time.swift in Sources */,
 				D2417A652B396DB200D89723 /* PlacesView.swift in Sources */,
 				D2417A972B3AC3FE00D89723 /* Sport.swift in Sources */,
+				D2E9009F2B3F2FFD003C860A /* PopupDetailsView.swift in Sources */,
 				D2417A7E2B3ABC1D00D89723 /* User.swift in Sources */,
 				D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */,
 				D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */,
@@ -366,11 +389,12 @@
 				D2417A622B396DB200D89723 /* ExploreView.swift in Sources */,
 				D2417A8F2B3ABDEE00D89723 /* CustomTabView.swift in Sources */,
 				D2417A992B3AC55B00D89723 /* AddCardTopayView.swift in Sources */,
+				D2E900A72B3F8B3D003C860A /*  SportPin.swift in Sources */,
 				D2417A5A2B396D9500D89723 /* SplashScreenView.swift in Sources */,
 				D2417AA02B3AF52A00D89723 /* SignIn.swift in Sources */,
+				D2E900A32B3F61B5003C860A /* BookingSummaryView.swift in Sources */,
 				D2417A7B2B3ABAB100D89723 /* SupabaseHelper.swift in Sources */,
 				D2417A912B3ABE0C00D89723 /* AuthService.swift in Sources */,
-				D24D58822B3D983B00F65EFF /* Booking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

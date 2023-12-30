@@ -12,7 +12,7 @@ struct CardExplore: View , Identifiable {
     var id = UUID()
     var imageName: String
     var title: String
-    
+    var typePlace: String
     
     var body: some View {
         VStack {
@@ -35,5 +35,5 @@ struct CardExplore: View , Identifiable {
 }
 
 #Preview {
-    CardExplore(imageName: "Run", title: "Cycling")
+    CardExplore(imageName: "Run", title: "Cycling", typePlace: "")
 }

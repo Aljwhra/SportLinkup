@@ -7,33 +7,39 @@
 
 import SwiftUI
 
-struct Time: View, Identifiable {
+struct Time: View, Identifiable{
     
     var id = UUID()
     var time : String
     var price: String
     
+    
+    
     var body: some View  {
         
-      
-                VStack {
-                    Text(time)
-                  
-                    Text("Hours")
-                        .font(.caption)
-                    
-                      .foregroundColor(Color("mygreyText"))
-                    
-                    HStack(spacing: 1){
-                        Text(price)
-                        Image("Cash")
-                    }
+        Button(action: {
+            
+        }, label: {
+            VStack{
+                Text(time)
+              
+                Text("Hours")
+                    .font(.caption)
+                
+                  .foregroundColor(Color("mygreyText"))
+                
+                HStack(spacing: 1){
+                    Text(price)
+                    Image("Cash")
                 }
-                .frame(width: 74, height: 84)
-                .overlay(
-                  RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color("mygreen"), lineWidth: 1)
-                )
+            }
+            .frame(width: 74, height: 84)
+            .overlay(
+              RoundedRectangle(cornerRadius: 8)
+                .stroke(Color("mygreen"), lineWidth: 1)
+            )
+        })
+               
             
         
     }

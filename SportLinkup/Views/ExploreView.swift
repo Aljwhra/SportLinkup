@@ -12,14 +12,33 @@ struct ExploreView: View {
     
     
     
-    let cardExploreArry = [
-        CardExplore(imageName: "Bike2", title: "Cycling"),
-        CardExplore(imageName: "Tennis2", title: "Padel courts"),
-        CardExplore(imageName: "Soccer2", title: "Soccer Fields"),
-        CardExplore(imageName: "Run", title: "Walking"),
-        CardExplore(imageName: "Gym", title: "Fitness Equipment")
+    let cardExploreArry = [ 
+        CardExplore(imageName: "Bike2", title: "Cycling", typePlace: "All"),
+        CardExplore(imageName: "Tennis2", title: "Padel courts", typePlace: "Private"),
+        CardExplore(imageName: "Soccer2", title: "Soccer Fields", typePlace: "Public"),
+        CardExplore(imageName: "Run", title: "Walking", typePlace: "Public"),
+        CardExplore(imageName: "Gym", title: "Fitness Equipment", typePlace: "Public")
         
     ]
+    
+    
+    
+    @State private var selectedFilter: FilterType = .All
+ 
+    
+    var filtered: [CardExplore] {
+        switch selectedFilter {
+        case .All:
+            return cardExploreArry
+        case .Public:
+            return cardExploreArry.filter { $0.typePlace  == "Public" }
+        case .Private:
+            return cardExploreArry.filter { $0.typePlace  == "Private" }
+        }
+    }
+
+
+
     
     var body: some View {
         NavigationStack{
@@ -28,12 +47,12 @@ struct ExploreView: View {
                 
                 HaderExplore()
                 
-                ButtonExplore()
+                ButtonExplore(selectedFilter: $selectedFilter)
                 
-                ScrollView(showsIndicators: false ){
+                ScrollView(showsIndicators: false){
                     
                     VStack(spacing:19){
-                        ForEach(cardExploreArry) { explore in
+                        ForEach(filtered) { explore in
                             NavigationLink(
                                 destination: PlacesView(sportTitle: explore.title ),
                                 label: {
@@ -54,6 +73,13 @@ struct ExploreView: View {
             
         }
     }
+}
+
+
+enum FilterType{
+    case All
+    case Public
+    case Private
 }
 
 #Preview {

@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct BookingView: View {
-    
+    var sportId: UUID
     @State var isNext = false
+    
+    var sportTitle: String
+    
+    @State private var date = Date()
+    @State var digitData = 0
     
     @Environment(\.dismiss) var dismiss
     
     let arryTime = [
-        
+         
      Time(time: "1-2", price: "200"),
      Time(time: "1-3", price: "300"),
      Time(time: "1-4", price: "400"),
@@ -30,29 +35,8 @@ struct BookingView: View {
         
         
         VStack{
-           
-                HStack(spacing: 123){
-                    
-                    HStack{
-                        Button{
-                            
-                            dismiss()
-                        } label: {
-                            Image(systemName: "chevron.backward")
-                                .font(.system(size: 20))
-                                .foregroundStyle(.black)
-                        }
-                        
-                    }
-                    
-                    Text("Cycling")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                }
-                .frame(width: 350,alignment: .leading)
-                .padding(.top)
                 
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 
                 VStack(alignment: .leading){
                     
@@ -65,9 +49,61 @@ struct BookingView: View {
                 .frame(width: 350,alignment: .leading)
                 .padding(.top)
                 .padding(.bottom)
-                CalendarView()
-                PlayersStepper()
                 
+                VStack{
+                    DatePicker("Birthday", selection: $date, displayedComponents: .date)
+                        .accentColor(Color("mygreen"))
+                    
+                        .background(RoundedRectangle(cornerRadius: 20)
+                            .fill(Color.white)
+                            .stroke(Color("mygreen"), lineWidth: 1)
+                                    
+                        )
+                    
+                    
+                        .datePickerStyle(.graphical)
+                        .frame(width: 350)
+                }
+                
+                HStack{
+                    Text("Players")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Spacer()
+                    Button{
+                        if digitData == 0 {}
+                        else{
+                            digitData = digitData - 1
+                        }
+                    } label: {
+                        Image (systemName: "minus")
+                            .frame(width: 35, height: 35, alignment: .center)
+                            .background(Color("mygrey"))
+                            .cornerRadius(10)
+                        
+                    }
+                    
+                    Text("\(digitData)")
+                        .font(.title)
+                    
+                    Button{
+                        if digitData == 4 {}
+                        else{
+                            digitData = digitData + 1
+                        }
+                        
+                    } label: {
+                        Image (systemName: "plus")
+                            .frame(width: 35, height: 35, alignment: .center)
+                            .background(Color("mygreen"))
+                            .cornerRadius(10)
+                        
+                    }
+                    
+                }
+                .padding()
+        
                 Divider()
                     .background(Color("mygreen"))
                     .frame(width: 345)
@@ -97,7 +133,7 @@ struct BookingView: View {
                     }, label: {
                         Text("Next")
                     }).fullScreenCover(isPresented: $isNext) {
-                        AddCardTopayView()
+                        BookingSummaryView(date:date, digitData: digitData, sportId: sportId )
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -107,10 +143,12 @@ struct BookingView: View {
                 .padding(.top, 45)
             }.padding(11)
             .padding(.top)
+            
+            .navigationTitle(sportTitle)
         }
     }
 }
 
 #Preview {
-    BookingView()
+    BookingView(sportId: UUID(), sportTitle: "")
 }

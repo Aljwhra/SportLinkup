@@ -14,6 +14,8 @@ struct SignIn: View {
     @State private var password = ""
     
     @State var networking: Bool = false
+    @State var isSignIn = false
+    @State var isSignUp = false
     
     var body: some View {
         
@@ -53,8 +55,11 @@ struct SignIn: View {
                     )
                     .padding(.top, 8)
                 
-                Button(action: { signUp() }, label: {
-                    Text("Sign Up")
+                Button(action:
+                        {
+                    isSignIn = true
+                }, label: {
+                    Text("Sign In")
                         .font(.title3).bold()
                         .foregroundStyle(.black)
                         .padding(.horizontal ,100)
@@ -64,11 +69,20 @@ struct SignIn: View {
                 .background(Color.mygreen)
                 .cornerRadius(10)
                 .padding(.top, 45)
+                .fullScreenCover(isPresented: $isSignIn ) {
+                    CustomTabView()
+                }
+                
                 HStack {
                     Text("You don't have an account?")
                         .foregroundStyle(Color.gray)
-                    Button("Sign Up", action: {})
+                    Button("Sign Up", action: {
+                        isSignUp = true
+                    })
                         .foregroundStyle(Color.mygreen)
+                        .fullScreenCover(isPresented: $isSignUp ) {
+                            CreateAccount(didOnboard: $didOnboard )
+                        }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 45)

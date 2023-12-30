@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActivitieDetailsView: View {
     
-    @Environment(\.dismiss) var dismiss
+
     @StateObject var vm = ActivitiesViewModel()
     
     var activitieID: UUID
@@ -18,28 +18,7 @@ struct ActivitieDetailsView: View {
         
         NavigationStack{
             
-            HStack(spacing: 123){
-                
-                HStack{
-                    Button{
-                        
-                        dismiss()
-                    } label: {
-                        Image(systemName: "chevron.backward")
-                            .font(.system(size: 20))
-                            .foregroundStyle(.black)
-                    }
-                    
-                }
-                
-                Text("Activities")
-                    .font(.title3)
-                    .fontWeight(.semibold)
-            }
-            .frame(width: 350,alignment: .leading)
-            .padding(.top)
-            
-            ScrollView {
+            ScrollView(showsIndicators: false){
                 
                 ForEach(vm.activitie){ act in
                     if act.id == activitieID {
@@ -70,7 +49,7 @@ struct ActivitieDetailsView: View {
             .padding(16)
             .background(Color.mygreen)
             .cornerRadius(10)
-            // .padding(.top, 45)
+          
         }
         .padding(11)
         .onAppear{
@@ -78,7 +57,7 @@ struct ActivitieDetailsView: View {
         }
         
         
-        .navigationBarBackButtonHidden(true)
+        .navigationTitle("Activities")
     }
 }
 
