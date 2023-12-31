@@ -15,5 +15,5 @@ final class AuthService: ObservableObject {
     var token: String = ""
     
     @Published var loggedIn: Bool = false
-   
+    @Published var isDarkMode: Bool = false
 }

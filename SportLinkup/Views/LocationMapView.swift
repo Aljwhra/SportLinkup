@@ -11,12 +11,12 @@ import MapKit
 
 struct LocationMapView: View {
     @StateObject private var locationViewModel = LocationViewModel()
-
+    
     @State private var pins: [SportPin] = []
-
-
+    
+    
     @State private var selectedPlace: Place?
-
+    
     var body: some View {
         
         VStack{
@@ -39,7 +39,7 @@ struct LocationMapView: View {
                 
             }
             
-           
+            
             .onAppear {
                 locationViewModel.requestLocation()
                 fetch()
@@ -70,26 +70,26 @@ struct LocationMapView: View {
     private func navigate(lat: Double, lon: Double) {
         if let url = URL(string: "comgooglemaps://?saddr=&daddr=\(lat),\(lon)&directionsmode=driving") {
             if UIApplication.shared.canOpenURL(url) {
-                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 return
             }
         }
         
         if let url = URL(string: "maps://?saddr=&daddr=\(lat),\(lon)") {
             if UIApplication.shared.canOpenURL(url) {
-                  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 return
             }
         }
     }
-        
+    
 }
 
 struct Place: Identifiable {
     let id = UUID()
     let title: String
     let coordinate: CLLocationCoordinate2D
-
+    
     func distance(to location: CLLocationCoordinate2D) -> CLLocationDistance {
         let placeLocation = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
         let tappedLocation = CLLocation(latitude: location.latitude, longitude: location.longitude)
@@ -99,35 +99,35 @@ struct Place: Identifiable {
 
 class LocationViewModel: NSObject, ObservableObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
-
+    
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 24.7136, longitude: 46.6753), // Riyadh, Saudi Arabia
         span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
     )
-
+    
     @Published var tappedLocation: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-
+    
     override init() {
         super.init()
         setupLocationManager()
     }
-
+    
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
-
+    
     func requestLocation() {
         locationManager.requestLocation()
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             region.center = location.coordinate
         }
     }
-
+    
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location error: \(error.localizedDescription)")
     }
@@ -138,4 +138,5 @@ struct LocationMapView_Previews: PreviewProvider {
         LocationMapView()
     }
 }
+
 

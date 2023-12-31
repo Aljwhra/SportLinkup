@@ -18,7 +18,7 @@ struct Activities: Identifiable , Codable{
     var supActivitieDes: String
     var place: String
     var time: String
-    var location: String
+    var location: String?
     
     
 }

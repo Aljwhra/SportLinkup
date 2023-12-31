@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ActivitieDetailsView: View {
     
-
+    @Environment(\.dismiss) var dismiss
     @StateObject var vm = ActivitiesViewModel()
     
     var activitieID: UUID
@@ -23,14 +23,10 @@ struct ActivitieDetailsView: View {
                 ForEach(vm.activitie){ act in
                     if act.id == activitieID {
                         ActivitieDetails(act: act )
-            
+                        
                     }
                 }
             }
-            
-            
-            
-            
             
         }
         
@@ -38,26 +34,27 @@ struct ActivitieDetailsView: View {
             Button(action: {
                 
                 
-                if let url = URL(string: "https://www.google.com/maps/place/ممشى+الدرعية%E2%80%AD/@24.7487507,46.5860901,17z/data=!4m14!1m7!3m6!1s0x3e2ee167de053f07:0xbb03b27f5bf3e11f!2z2YXZhdi02Ykg2KfZhNiv2LHYudmK2Kk!8m2!3d24.7487459!4d46.5835152!16s%2Fg%2F11gmzp0r9f!3m5!1s0x3e2ee167de053f07:0xbb03b27f5bf3e11f!8m2!3d24.7487459!4d46.5835152!16s%2Fg%2F11gmzp0r9f?entry=ttu") {
+                if let specificActivity = vm.activitie.first(where: { $0.id == activitieID }),
+                   let urlString = specificActivity.location,
+                   let url = URL(string: urlString) {
                     UIApplication.shared.open(url)
                 }
                 
             }, label: {
-                Text("See Location")
+                Text("See Activity")
             })
             .frame(maxWidth: .infinity)
             .padding(16)
             .background(Color.mygreen)
             .cornerRadius(10)
-          
         }
         .padding(11)
         .onAppear{
             vm.fetchActivities()
         }
         
-        
         .navigationTitle("Activities")
+        .navigationBarBackButtonHidden(false)
     }
 }
 
@@ -65,3 +62,4 @@ struct ActivitieDetailsView: View {
 #Preview {
     ActivitieDetailsView(activitieID: UUID())
 }
+

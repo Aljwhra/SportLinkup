@@ -20,7 +20,7 @@ struct  Sport: Identifiable , Codable{
     var typePlace: String
     var time: String
     var date: String
-    var location: String
+    var location: String?
     var dcsPlace: String
     
 }

@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct PlacesView: View {
-    
-  
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.dismiss) var dismiss
     @StateObject var vm = SportViewModel()
- 
-    
     var sportTitle: String
     
     var body: some View {
-        NavigationStack{
+        NavigationStack{            
             ScrollView(showsIndicators: false){
+                
                 VStack{
+                    
+                    
                     VStack(spacing: 16){
                         ForEach(vm.sports){ places in
                             if places.typesport == sportTitle {
@@ -33,14 +34,15 @@ struct PlacesView: View {
                     }
                     .padding(.top,3)
                 }
-                .navigationTitle(sportTitle)
-                .navigationBarBackButtonHidden(false)
-                .navigationBarTitleDisplayMode(.inline)
+                
+                .navigationBarBackButtonHidden(true)
                 
             }
             .onAppear{
                 vm.fetchData()
             }
+           .navigationTitle(sportTitle)
+            .navigationBarBackButtonHidden(false)
         }
     }
 }

@@ -8,17 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var auth = AuthService.shared
+    
+    @State var didSplash: Bool = false
+    @State var didOnboard: Bool = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        if didSplash {
+            if didOnboard {
+                CustomTabView()
+            } else {
+                OnboardingView(didOnboard: $didOnboard)
+            }
+        } else {
+            SplashScreenView(didSplash: $didSplash)
         }
-        .padding()
     }
 }
 
 #Preview {
     ContentView()
 }
+

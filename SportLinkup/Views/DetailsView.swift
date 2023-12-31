@@ -5,14 +5,18 @@
 //  Created by Aljwhra Alnasser on 24/12/2023.
 //
 
+
 import SwiftUI
 
 
 struct DetailsView: View {
     
-
+    @Environment(\.colorScheme) var colorScheme
+    @Environment(\.dismiss) var dismiss
     @StateObject var vm = SportViewModel()
-    @State var isBooK = false
+    @ObservedObject var auth = AuthService.shared
+    @State private var showSignInAlert: Bool = false
+    @State private var showSignInView: Bool = false
     
     var sportTitle: String
     var sportId: UUID
@@ -20,9 +24,12 @@ struct DetailsView: View {
     
     var body: some View {
         NavigationStack{
+            
             ScrollView(showsIndicators: false){
+                
                 ForEach(vm.sports){ detail in
                     if detail.id == sportId{
+                        
                         Details(details: detail)
                         
                     }
@@ -33,34 +40,42 @@ struct DetailsView: View {
             VStack(spacing:14){
                 
                 if sportTitle == "Padel courts" {
-                    
                     HStack(alignment: .center, spacing: 0) {
-                        
-                        NavigationLink(
-                            destination:
-                                //PopupDetailsView(sportTitle: "", sportId: UUID())
-                            BookingView(sportId: sportId, sportTitle: ""),
+                        if let user = auth.user {
+                            NavigationLink {
+                                BookingView(sportId: sportId, sportTitle: sportTitle)
+                            } label: {
+                                Text("BooK")
+                                    .frame(maxWidth: .infinity)
+                                    .padding(16)
+                                    .background(Color.mygreen)
+                                    .cornerRadius(10)
+                            }
                             
-                            label: {
+                        } else {
+                            Button(action: {
+                                showSignInAlert.toggle()
+                            }, label: {
                                 Text("BooK")
                                     .frame(maxWidth: .infinity)
                                     .padding(16)
                                     .background(Color.mygreen)
                                     .cornerRadius(10)
                             })
+                            
+                        }
                         
                         
-                    }
-                    .padding(.horizontal)
+                    }.padding(.horizontal)
                     
                 }
-                
-                
                 HStack(alignment: .center, spacing: 0) {
                     Button(action: {
                         
                         
-                        if let url = URL(string: "https://www.google.com/maps/place/ممشى+الدرعية%E2%80%AD/@24.7487507,46.5860901,17z/data=!4m14!1m7!3m6!1s0x3e2ee167de053f07:0xbb03b27f5bf3e11f!2z2YXZhdi02Ykg2KfZhNiv2LHYudmK2Kk!8m2!3d24.7487459!4d46.5835152!16s%2Fg%2F11gmzp0r9f!3m5!1s0x3e2ee167de053f07:0xbb03b27f5bf3e11f!8m2!3d24.7487459!4d46.5835152!16s%2Fg%2F11gmzp0r9f?entry=ttu") {
+                        if let specificActivity = vm.sports.first(where: { $0.id == sportId }),
+                           let urlString = specificActivity.location,
+                           let url = URL(string: urlString) {
                             UIApplication.shared.open(url)
                         }
                         
@@ -71,28 +86,33 @@ struct DetailsView: View {
                     .padding(16)
                     .background(Color.mygreen)
                     .cornerRadius(10)
-                    
-                }
-                .padding(.horizontal)
+                }.padding(.horizontal)
             }
             .padding(.top,10)
             
-            .navigationBarBackButtonHidden(false)
-            .navigationBarTitleDisplayMode(.inline)
-            
         }
+        .alert("Sign In", isPresented: $showSignInAlert, actions: {
+            Button("Sign In") {
+                showSignInView.toggle()
+            }
+            Button("Cancel", role: .cancel, action: {})
+        })
+        .fullScreenCover(isPresented: $showSignInView, content: {
+            SignIn()
+        })
         .onAppear{
             vm.fetchData()
         }
         
-        
-        
+        .navigationBarBackButtonHidden(false)
     }
+    
 }
 
 
 #Preview {
     DetailsView(sportTitle: "", sportId: UUID())
 }
+
 
 

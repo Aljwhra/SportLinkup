@@ -3,7 +3,7 @@
 //  SportLinkup
 //
 //  Created by Aljwhra Alnasser on 25/12/2023.
-//
+//gitHup
 
 import SwiftUI
 
@@ -14,8 +14,8 @@ struct SportLinkupApp: App {
     
     var body: some Scene {
         WindowGroup {
-          SplashScreenView()
-           // .preferredColorScheme(auth.isDarkMode ? .dark : .light)
+            ContentView()
+             .preferredColorScheme(auth.isDarkMode ? .dark : .light)
         }
     }
 }

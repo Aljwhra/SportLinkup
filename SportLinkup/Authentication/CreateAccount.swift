@@ -9,13 +9,12 @@ import SwiftUI
 
 struct CreateAccount: View {
     
-    @Binding var didOnboard: Bool
+//    @Binding var didOnboard: Bool
+    @Environment(\.dismiss) var dismiss
+    let dismissSignIn: () -> ()
     
     @State private var email = ""
     @State private var password = ""
-    
-    @State var isSignIn = false
-    @State var isSignUp = false
     
     @State var networking: Bool = false
     
@@ -69,9 +68,9 @@ struct CreateAccount: View {
                     )
                 
                 
-                Button(action: { 
+                Button(action: {
                     signUp()
-                    isSignUp = true
+//                    isSignUp = true
                     
                 }, label: {
                     Text("Sign Up")
@@ -85,20 +84,14 @@ struct CreateAccount: View {
                 .background(Color.mygreen)
                 .cornerRadius(10)
                 .padding(.top, 44)
-                .fullScreenCover(isPresented: $isSignUp) {
-                     CustomTabView()
-                }
                 
                 HStack {
                     Text("Do you have an account? ")
                         .foregroundStyle(Color.gray)
                     Button("Sign In", action: {
-                        isSignIn = true
+                        dismiss()
                     })
                         .foregroundStyle(Color.mygreen)
-                        .fullScreenCover(isPresented: $isSignIn) {
-                            SignIn(didOnboard: $didOnboard )
-                        }
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 44)
@@ -128,11 +121,12 @@ struct CreateAccount: View {
                 try await SupabaseHelper.create(object: user, tableName: "User")
                 let result: [User] = try await SupabaseHelper.read(tableName: "User", column: "uid", value: uid)
 
-                didOnboard = true
+//                didOnboard = true
                 AuthService.shared.token = token
                 AuthService.shared.user = result.first
                 AuthService.shared.loggedIn = true
                 networking = false
+                dismissSignIn()
             } catch {
                 networking = false
                 print(error)
@@ -150,5 +144,6 @@ struct CreateAccount: View {
 }
 
 #Preview {
-    CreateAccount(didOnboard: .constant(false))
+    CreateAccount( dismissSignIn: {})
 }
+

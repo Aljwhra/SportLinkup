@@ -2,14 +2,18 @@
 //  BookingDetailsView.swift
 //  SportLinkup
 //
-//  Created by Aljwhra Alnasser on 29/12/2023.
-//
+//  Created by Aljwhra & Raneem on 29/12/2023.
+
 
 import SwiftUI
 
 struct BookingSummaryView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var date: Date
     var digitData: Int
+    var timePrice: TimePrice
     var sportId: UUID
     
     @State var isNext = false
@@ -44,37 +48,47 @@ struct BookingSummaryView: View {
                     Text("Time")
                         .font(.headline)
                     
-                    // Text("\(sportId)")
+                    
+                    Text("\(timePrice.time) \(timePrice.price)")
+                        .font(Font.custom("Inter", size: 16))
+                        .foregroundColor(Color(.mygreyText))
                 }
                 
-              
+                
             }
             
             HStack(alignment: .center, spacing: 0) {
-                Button(action: {
+                NavigationLink {
+                    AddCardTopayView(sportID: sportId, timePrice: timePrice, date: date, digitData: digitData)
                     
-                isNext = true
-                    
-                }, label: {
+                } label: {
                     Text("Next")
-                }).fullScreenCover(isPresented: $isNext) {
-                    AddCardTopayView()
+                        .frame(maxWidth: .infinity)
+                        .padding(16)
+                        .background(Color.mygreen)
+                        .cornerRadius(10)
                 }
             }
-            .frame(maxWidth: .infinity)
-            .padding(16)
-            .background(Color.mygreen)
-            .cornerRadius(10)
             .padding(.top, 45)
             .padding(11)
-            
+            .navigationBarBackButtonHidden()
             .navigationTitle("Booking")
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor( Color.black)
+                            .flipsForRightToLeftLayoutDirection(true)
+                    }
+                }
             }
-            
         }
+        
     }
+}
 
 
 #Preview {
-    BookingSummaryView(date: Date(), digitData: 0, sportId: UUID())
+    BookingSummaryView(date: Date(), digitData: 0, timePrice: .init(id: 0, time: "", price: ""), sportId: UUID())
 }
+

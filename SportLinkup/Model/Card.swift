@@ -59,3 +59,4 @@ struct Card: Codable, Identifiable {
         try container.encode(self.uid, forKey: .uid)
     }
 }
+

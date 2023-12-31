@@ -141,6 +141,21 @@ final class SupabaseHelper {
         return try JSONDecoder().decode([T].self, from: data)
     }
     
+    static func read<T: Codable>(tableName: String, column: String, value: Int) async throws -> [T] {
+        print(#function)
+        let query = "\(column)=eq.\(value)"
+        let url = URL(string: "\(baseURL)/rest/v1/\(tableName)?\(query)")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        request.setValue(apiKey, forHTTPHeaderField: "apikey")
+        request.setValue(apiKey, forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let (data, _) = try await URLSession.shared.data(for: request)
+        print(String(data: data, encoding: .utf8))
+        return try JSONDecoder().decode([T].self, from: data)
+    }
+    
     static func read<T: Codable>(tableName: String, column: String, values: [String]) async throws -> [T] {
         let formattedValues: String = values.map { "\($0)" }.joined(separator: ",")
         print(formattedValues)
@@ -205,3 +220,4 @@ final class SupabaseHelper {
     }
 
 }
+

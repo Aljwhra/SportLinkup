@@ -14,15 +14,38 @@ struct TermsConditionsView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text("Last update 10/12/2023")
+            
+            Text("Last update 31/12/2023")
                 .foregroundColor(.gray)
-            Text("Please read these terms of service, carefully before using our app operated by us.")
-            Text("Conditions of Uses")
-                .foregroundColor(.blue)
-            Text("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).")
-            Spacer()
+            ScrollView{
+                VStack(alignment: .leading, spacing: 12){
+                    Text("Please read these terms of service, carefully before using our app operated by us.")
+                    Text("Privacy Policy of SportLinkupApp")
+                        .foregroundColor(.blue)
+                    
+                    Text(
+                 """
+                 The owner does not provide a list of Personal Data types collected.
+                 Complete details on each type of Personal Data collected are provided in the dedicated sections of
+                 this privacy policy or by specific explanation texts displayed prior to the Data collection.
+                 Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically
+                 when using this Application.
+                 Unless specified otherwise, all Data requested by this Application is mandatory and failure to
+                 provide this Data may make it impossible for this Application to provide its services.
+                 In cases where this Application specifically states that some Data is not mandatory, Users are free
+                 not to communicate this Data without consequences to the availability or the functioning of the Service.
+                 Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.
+                 Any use of Cookies – or of other tracking tools — by this Application or by the owners of third-party
+                 services used by this Application serves the purpose of providing the Service required by the User, in
+                 addition to any other purposes described in the present document and in the Cookie Policy.
+                 Users are responsible for any third-party Personal Data obtained, published or shared through this Application.
+                """)
+                    .multilineTextAlignment(.leading)
+                    //  Spacer()
+                }
+            }
         }
-        .navigationTitle("Terms & Conditions")
+        .navigationTitle("Privacy Policy")
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarBackButtonHidden()
         .toolbar {
@@ -43,3 +66,4 @@ struct TermsConditionsView: View {
         TermsConditionsView()
     }
 }
+

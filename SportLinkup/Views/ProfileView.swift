@@ -38,31 +38,45 @@ struct ProfileView: View {
                 .padding(.top, 36)
             
             List {
-                listRow(title: "Edit Profile", imageName: "edit1") {
+                if auth.user != nil {
+                    listRow(title: "Edit Profile", imageName: "edit1") {
+                        
+                        EditProfileView()
+                        
+                    }
                     
-                    EditProfileView()
-                    
+                    listRow(title: "My Booking", imageName: "Booking") {
+                        
+                        MyBookingView()
+                    }
                 }
-                listRow(title: "Terms & Conditions", imageName: "Terms") {
-                    
-                    TermsConditionsView()
-                }
-                listRow(title: "My Booking", imageName: "Booking") {
+                
+                listRow(title: "Privacy Policy", imageName: "Terms") {
                     
                     TermsConditionsView()
                 }
                 
+                HStack(spacing: 16) {
+                    Image(colorScheme == .dark ? "theme_dark" : "theme_light")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 26, height: 26)
+                    Toggle("Dark Mode", isOn: $auth.isDarkMode)
+                }
+                .padding(.vertical, 12)
+                
                 Button {
-                    signout()
+                    if let url = URL(string: UIApplication.openSettingsURLString) {
+                        UIApplication.shared.open(url)
+                    }
                 } label: {
                     HStack(spacing: 16) {
-                        Image("rectangle.portrait.and.arrow.left")
+                        Image(systemName: "globe")
                             .resizable()
                             .fontWeight(.thin)
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 26, height: 26)
-                        Text("Logout")
-                            .foregroundStyle(.red)
+                        Text("Change Language")
                         Spacer()
                         Image(systemName: "chevron.right")
                             .flipsForRightToLeftLayoutDirection(true)
@@ -71,6 +85,30 @@ struct ProfileView: View {
                     }
                 }
                 .padding(.vertical, 12)
+                
+                
+                if auth.user != nil {
+                    Button {
+                        signout()
+                    } label: {
+                        HStack(spacing: 16) {
+                            Image("rectangle.portrait.and.arrow.left")
+                                .resizable()
+                                .fontWeight(.thin)
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 26, height: 26)
+                            Text("Logout")
+                                .foregroundStyle(.red)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .flipsForRightToLeftLayoutDirection(true)
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                        }
+                    }
+                    .padding(.vertical, 12)
+                }
+                
                 
                 
                 
@@ -114,3 +152,4 @@ struct ProfileView: View {
         }
         
     }
+

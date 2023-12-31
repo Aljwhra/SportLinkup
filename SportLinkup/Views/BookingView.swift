@@ -2,40 +2,45 @@
 //  BookingView.swift
 //  SportLinkup
 //
-//  Created by Aljwhra Alnasser on 25/12/2023.
+//  Created by Aljwhra & Raneem on 25/12/2023.
 //
 
 import SwiftUI
+
+struct TimePrice: Identifiable {
+    let id: Int
+    let time: String
+    let price: String
+}
 
 struct BookingView: View {
     var sportId: UUID
     @State var isNext = false
     
     var sportTitle: String
-    
+    @Environment(\.colorScheme) var colorScheme
     @State private var date = Date()
     @State var digitData = 0
     
     @Environment(\.dismiss) var dismiss
     
-    let arryTime = [
-         
-     Time(time: "1-2", price: "200"),
-     Time(time: "1-3", price: "300"),
-     Time(time: "1-4", price: "400"),
-     Time(time: "1-5", price: "500"),
-     Time(time: "1-6", price: "600"),
-     Time(time: "1-7", price: "700"),
-     Time(time: "1-8", price: "800"),
-     Time(time: "1-9", price: "900")
-     
-     ]
+    let arryTime: [TimePrice] = [
+        .init(id: 0, time: "1-2", price: "200"),
+        .init(id: 1, time: "1-3", price: "300"),
+        .init(id: 2, time: "1-4", price: "400"),
+        .init(id: 3, time: "1-5", price: "500"),
+        .init(id: 4, time: "1-6", price: "600"),
+        .init(id: 5, time: "1-7", price: "700"),
+        .init(id: 6, time: "1-8", price: "800"),
+        .init(id: 7, time: "1-9", price: "900")
+    ]
+    @State var selectedTimePrice: Int = 0
     
     var body: some View {
         
         
         VStack{
-                
+            
             ScrollView(showsIndicators: false){
                 
                 VStack(alignment: .leading){
@@ -55,7 +60,7 @@ struct BookingView: View {
                         .accentColor(Color("mygreen"))
                     
                         .background(RoundedRectangle(cornerRadius: 20)
-                            .fill(Color.white)
+                            .fill(colorScheme == .dark ? Color.black.opacity(0.6) : Color.white)
                             .stroke(Color("mygreen"), lineWidth: 1)
                                     
                         )
@@ -103,13 +108,13 @@ struct BookingView: View {
                     
                 }
                 .padding()
-        
+                
                 Divider()
                     .background(Color("mygreen"))
                     .frame(width: 345)
                 
                 
-               
+                
                 VStack(alignment: .leading){
                     Text("Time")
                         .font(.title2)
@@ -119,32 +124,38 @@ struct BookingView: View {
                 
                 ScrollView(.horizontal){
                     HStack{
-                        ForEach(arryTime) { time in
-                            time
+                        ForEach(arryTime) { item in
+                            Time(item: item, selected: $selectedTimePrice)
                         }
                     }.padding()
                 }
                 
                 HStack(alignment: .center, spacing: 0) {
-                    Button(action: {
-                        
-                    isNext = true
-                        
-                    }, label: {
+                    NavigationLink {
+                        BookingSummaryView(date:date, digitData: digitData, timePrice: arryTime[selectedTimePrice], sportId: sportId )
+                    } label: {
                         Text("Next")
-                    }).fullScreenCover(isPresented: $isNext) {
-                        BookingSummaryView(date:date, digitData: digitData, sportId: sportId )
+                            .frame(maxWidth: .infinity)
+                            .padding(16)
+                            .background(Color.mygreen)
+                            .cornerRadius(10)
                     }
                 }
-                .frame(maxWidth: .infinity)
-                .padding(16)
-                .background(Color.mygreen)
-                .cornerRadius(10)
                 .padding(.top, 45)
-            }.padding(11)
+            }
+            .padding(11)
             .padding(.top)
-            
             .navigationTitle(sportTitle)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor( Color.black)
+                            .flipsForRightToLeftLayoutDirection(true)
+                    }
+                }
+            }
         }
     }
 }
@@ -152,3 +163,4 @@ struct BookingView: View {
 #Preview {
     BookingView(sportId: UUID(), sportTitle: "")
 }
+
