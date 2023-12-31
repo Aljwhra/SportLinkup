@@ -70,7 +70,7 @@ struct ActivitieDetails: View {
                     .foregroundColor(.black)
                     .frame(width: 189, alignment: .leading)
                 
-                Text(act.time)
+                Text(act.time ?? "")
                     .font(Font.custom("Inter", size: 16))
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
                     .frame(width: 229, alignment: .leading)
