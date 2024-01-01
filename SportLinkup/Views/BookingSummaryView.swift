@@ -114,6 +114,7 @@ struct BookingSummaryView: View {
                             .foregroundColor(Color(.mygreyText))
                     }
                 }
+                .padding()
                 
                 
             }
@@ -123,7 +124,7 @@ struct BookingSummaryView: View {
                     AddCardTopayView(sportID: sportId, timePrice: timePrice, date: date, digitData: digitData, onDismiss: onDismiss)
                    
                 } label: {
-                    Text("Next")
+                    Text("confirme")
                         .frame(maxWidth: .infinity)
                         .padding(16)
                         .background(Color.mygreen)
@@ -131,7 +132,7 @@ struct BookingSummaryView: View {
                 }
             }
             .padding(.top, 45)
-            .padding(15)
+            .padding(17)
             
             .navigationBarBackButtonHidden()
             .navigationTitle("Booking")

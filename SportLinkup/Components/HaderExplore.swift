@@ -17,7 +17,7 @@ struct HaderExplore: View {
             Text("Explore")
                 .fontWeight(.semibold)
                 .font(.title)
-              .foregroundColor(.black)
+//              .foregroundColor(.black)
             
             Spacer()
             

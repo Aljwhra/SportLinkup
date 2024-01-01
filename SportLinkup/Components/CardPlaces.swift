@@ -11,7 +11,7 @@ struct CardPlaces: View {
 
     @Environment(\.colorScheme) var colorScheme
     var cardPlaces: Sport
-    
+   
     var body: some View {
         
         HStack{
@@ -33,27 +33,29 @@ struct CardPlaces: View {
             }
          
             
-            VStack(alignment: .leading){
+            VStack(alignment: .leading,spacing: 10){
                 
                 Text(cardPlaces.titile)
-                    .fontWeight(.semibold)
-                    .font(.title3)
+                    .font(Font.custom("Inter", size: 19)
+                    .weight(.semibold))
                     .foregroundStyle(colorScheme == .dark ? .white: .black)
                   
                 
                 Text(cardPlaces.supTitle)
+                    .font(Font.custom("Inter", size: 16))
                     .foregroundStyle(Color("mygreyText"))
                     .multilineTextAlignment(.leading)
                 
                 HStack{
                     Text(cardPlaces.place)
+                        .font(Font.custom("Inter", size: 16))
                         .foregroundStyle(Color("mygreyText"))
                     
                 }
             }
             .frame(width: 185, alignment: .leading)
         }
-        .frame(width: 353, height: 156)
+        .frame(width: 353, height: 150)
         .overlay(
           RoundedRectangle(cornerRadius: 15)
             .stroke(Color("mygreen"), lineWidth: 1.5)

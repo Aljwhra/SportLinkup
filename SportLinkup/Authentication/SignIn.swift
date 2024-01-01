@@ -20,7 +20,9 @@ struct SignIn: View {
     @State var isSignUp = false
     
     var body: some View {
+        
         NavigationStack {
+            
             VStack{
                 
                 
@@ -101,8 +103,8 @@ struct SignIn: View {
                         dismiss()
                     } label: {
                         Image(systemName: "xmark.circle.fill")
-                            .foregroundColor(.gray)
-                            .font(.title)
+                            .foregroundColor(Color("mygreen"))
+                            .font(.title3)
                     }
                     
                 }

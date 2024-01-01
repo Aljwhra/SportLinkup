@@ -13,6 +13,9 @@ struct PlacesView: View {
     @StateObject var vm = SportViewModel()
     var sportTitle: String
     
+    @Namespace private var basicNS
+    @State private var move = false
+    
     var body: some View {
         NavigationStack{
             ScrollView{
@@ -24,15 +27,23 @@ struct PlacesView: View {
                         ForEach(vm.sports){ places in
                             if places.typesport == sportTitle {
                                 NavigationLink(
-                                    destination: DetailsView(sportTitle: sportTitle, sportId:places.id),
+                                    destination: 
+                                        DetailsView(sportTitle: sportTitle, sportId: places.id),
                                     label: {
                                         CardPlaces(cardPlaces: places)
-                                        
                                     })
+//                                    .matchedGeometryEffect(id: places.id, in: basicNS, isSource: true)
+//                                    .onTapGesture {
+//                                        withAnimation {
+//                                            move.toggle()
+//                                        }
+//                                    }
+
                             }
                         }
                     }
                     .padding(.top,3)
+                   
                 }
                 
                 .navigationBarBackButtonHidden(true)

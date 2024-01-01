@@ -22,6 +22,7 @@ struct CardExplore: View , Identifiable {
                .font(.title2)
                .fontWeight(.semibold)
               .frame(width: 300,alignment: .topLeading)
+            
             Image(imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateAccount: View {
     
-    //    @Binding var didOnboard: Bool
+ 
     @Environment(\.dismiss) var dismiss
     let dismissSignIn: () -> ()
     
@@ -19,88 +19,101 @@ struct CreateAccount: View {
     @State var networking: Bool = false
     
     var body: some View {
-        
-        VStack{
-            
-            
-            VStack(alignment: .leading, spacing: 0) {
-                Text("Welcome to\n SportLinkup")
-                    .multilineTextAlignment(.leading)
+        NavigationStack{
+            VStack{
                 
                 
-                    .font(.title)
-                
-                
-                Text("Create an account to save your time \n and effort in searching for sport\n places easily")
-                
-                
-                
-                    .multilineTextAlignment(.leading)
-                    .foregroundStyle(.gray)
-                
-                    .padding(.top, 24)
-                
-                Text("Email")
-                    .font(.title3)
-                    .foregroundStyle(.black)
-                    .padding(.top, 54)
-                
-                TextField("Enter Your Email", text: $email)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.mygreen, lineWidth: 1.5)
-                    )
-                    .padding(.top, 8)
-                
-                
-                Text("Password")
-                    .font(.title3)
-                    .foregroundStyle(.black)
-                    .padding(.top, 8)
-                
-                SecureField("Enter Your Password ", text: $password)
-                    .frame(maxWidth: .infinity)
-                    .padding()
-                    .background(RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.mygreen, lineWidth: 1.5)
-                    )
-                
-                
-                Button(action: {
-                    signUp()
-                }, label: {
-                    Text("Sign Up")
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("Welcome to\n SportLinkup")
+                        .multilineTextAlignment(.leading)
+                    
+                    
+                        .font(.title)
+                    
+                    
+                    Text("Create an account to save your time \n and effort in searching for sport\n places easily")
+                    
+                    
+                    
+                        .multilineTextAlignment(.leading)
+                        .foregroundStyle(.gray)
+                    
+                        .padding(.top, 24)
+                    
+                    Text("Email")
+                        .font(.title3)
                         .foregroundStyle(.black)
-                })
-                
-                .frame(maxWidth: .infinity)
-                .padding(16)
-                .background(Color.mygreen)
-                .cornerRadius(10)
-                .padding(.top, 44)
-                
-                HStack {
-                    Text("Do you have an account? ")
-                        .foregroundStyle(Color.gray)
-                    Button("Sign In", action: {
-                        dismiss()
+                        .padding(.top, 54)
+                    
+                    TextField("Enter Your Email", text: $email)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.mygreen, lineWidth: 1.5)
+                        )
+                        .padding(.top, 8)
+                    
+                    
+                    Text("Password")
+                        .font(.title3)
+                        .foregroundStyle(.black)
+                        .padding(.top, 8)
+                    
+                    SecureField("Enter Your Password ", text: $password)
+                        .frame(maxWidth: .infinity)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.mygreen, lineWidth: 1.5)
+                        )
+                    
+                    
+                    Button(action: {
+                        signUp()
+                    }, label: {
+                        Text("Sign Up")
+                            .foregroundStyle(.black)
                     })
-                    .foregroundStyle(Color.mygreen)
+                    
+                    .frame(maxWidth: .infinity)
+                    .padding(16)
+                    .background(Color.mygreen)
+                    .cornerRadius(10)
+                    .padding(.top, 44)
+                    
+                    HStack {
+                        Text("Do you have an account? ")
+                            .foregroundStyle(Color.gray)
+                        Button("Sign In", action: {
+                            dismiss()
+                        })
+                        .foregroundStyle(Color.mygreen)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .padding(.top, 44)
+                    Spacer()
                 }
-                .frame(maxWidth: .infinity)
-                .padding(.top, 44)
-                Spacer()
+                .padding(15)
+                
+                .edgesIgnoringSafeArea(.bottom)
+                .padding(.top,30)
+                
+                
             }
-            .padding(15)
-            
-            .edgesIgnoringSafeArea(.bottom)
-            .padding(.top,50)
-            
-            
+            .navigationBarBackButtonHidden()
+            .disabled(networking)
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        dismiss()
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .foregroundColor(Color("mygreen"))
+                            .font(.title3)
+                    }
+                    
+                }
+            })
         }
-        .navigationBarBackButtonHidden()
-        .disabled(networking)
     }
     
     @MainActor

@@ -34,19 +34,20 @@ struct CardActivities: View {
             }
             
                 
-            VStack(alignment: .leading){
+            VStack(alignment: .leading,spacing: 10){
                 
                 Text(cardActivities.activitieName)
-                    .fontWeight(.semibold)
-                    .font(.title3)
-                  
+                    .font(Font.custom("Inter", size: 19)
+                    .weight(.semibold))
                 
                 Text(cardActivities.activitieDes)
+                    .font(Font.custom("Inter", size: 16))
                     .foregroundStyle(Color("mygreyText"))
                     .multilineTextAlignment(.leading)
                 
                 HStack{
                     Text(cardActivities.place)
+                        .font(Font.custom("Inter", size: 16))
                         .foregroundStyle(Color("mygreyText"))
                     
 
@@ -54,7 +55,7 @@ struct CardActivities: View {
             }
             .frame(width: 185, alignment: .leading)
         }
-        .frame(width: 353, height: 156)
+        .frame(width: 353, height: 150)
         .overlay(
           RoundedRectangle(cornerRadius: 15)
             .stroke(Color("mygreen"), lineWidth: 1.5)

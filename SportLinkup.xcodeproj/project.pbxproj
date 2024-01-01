@@ -54,7 +54,6 @@
 		D2E900A12B3F57CC003C860A /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A02B3F57CC003C860A /* BookingViewModel.swift */; };
 		D2E900A32B3F61B5003C860A /* BookingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */; };
 		D2E900A72B3F8B3D003C860A /*  SportPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A62B3F8B3D003C860A /*  SportPin.swift */; };
-		D2E900A92B3FC493003C860A /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D2E900A82B3FC493003C860A /* Localizable.xcstrings */; };
 		D2F001B92B3BAE8800A91C7C /* SportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -107,7 +106,6 @@
 		D2E900A02B3F57CC003C860A /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryView.swift; sourceTree = "<group>"; };
 		D2E900A62B3F8B3D003C860A /*  SportPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " SportPin.swift"; sourceTree = "<group>"; };
-		D2E900A82B3FC493003C860A /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D2F001B82B3BAE8800A91C7C /* SportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +149,6 @@
 				D2417A5D2B396DB200D89723 /* Views */,
 				D2417A662B396DBB00D89723 /* Components */,
 				D2417A4C2B396D2800D89723 /* Assets.xcassets */,
-				D2E900A82B3FC493003C860A /* Localizable.xcstrings */,
 				D2417A4E2B396D2800D89723 /* Preview Content */,
 			);
 			path = SportLinkup;
@@ -326,7 +323,6 @@
 			files = (
 				D2417A502B396D2800D89723 /* Preview Assets.xcassets in Resources */,
 				D2417A4D2B396D2800D89723 /* Assets.xcassets in Resources */,
-				D2E900A92B3FC493003C860A /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
