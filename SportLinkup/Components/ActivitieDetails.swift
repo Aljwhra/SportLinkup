@@ -50,25 +50,34 @@ struct ActivitieDetails: View {
                     .font(Font.custom("Inter", size: 16))
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
                     .frame(width: 229, alignment: .leading)
-                Text(act.place)
-                    .font(
-                        Font.custom("Inter", size: 20)
-                            .weight(.medium)
-                    )
-                    .foregroundColor(Color(red: 0.04, green: 0.05, blue: 0.12))
+                
+                HStack{
+                    Text(act.place)
+                        .font(
+                            Font.custom("Inter", size: 20)
+                                .weight(.medium)
+                        )
+                        .foregroundColor(Color(red: 0.04, green: 0.05, blue: 0.12))
+                    Image("Image4")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 30)
+                }
                     .frame(width: 142, alignment: .leading)
                 
-//                Text(details.)
-//                    .font(Font.custom("Inter", size: 16))
-//                    .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
-//                    .frame(width: 229, alignment: .leading)
-                
-                Text("Time")
-                    .font(
-                        Font.custom("Inter", size: 20)
-                            .weight(.semibold)
-                    )
-                    .foregroundColor(.black)
+
+                HStack{
+                    Text("Time")
+                        .font(
+                            Font.custom("Inter", size: 20)
+                                .weight(.semibold)
+                        )
+                        .foregroundColor(.black)
+                    Image("Image2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 30)
+                }
                     .frame(width: 189, alignment: .leading)
                 
                 Text(act.time ?? "")

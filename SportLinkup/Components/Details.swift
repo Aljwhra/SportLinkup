@@ -48,39 +48,63 @@ struct Details: View {
                     .font(Font.custom("Inter", size: 16))
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
                     .frame(width: 229, alignment: .leading)
-                Text(details.place)
-                    .font(
-                        Font.custom("Inter", size: 20)
-                            .weight(.medium)
-                    )
-                    .foregroundColor(Color("dark"))
+               
+                HStack{
+                    Text(details.place)
+                        .font(Font.custom("Inter", size: 20)
+                            .weight(.medium))
+                        .foregroundColor(Color("dark"))
+                       
+                    Image("Image4")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 30)
                     
-                    .frame(width: 142, alignment: .leading)
+                }
+                .frame(width: 142, alignment: .leading)
+                
                 Text(details.dcsPlace)
                     .font(Font.custom("Inter", size: 16))
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
                     .frame(width: 229, alignment: .leading)
-                
-                Text("Time")
-                    .font(
-                        Font.custom("Inter", size: 20)
-                            .weight(.semibold)
-                    )
-                    .foregroundColor(Color("dark"))
-                    .frame(width: 189, alignment: .leading)
+              
+                HStack{
+                    Text("Time")
+                        .font(
+                            Font.custom("Inter", size: 20)
+                                .weight(.semibold)
+                        )
+                        .foregroundColor(Color("dark"))
+                    
+                    Image("Image2")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 30)
+                    
+                }
+                .frame(width: 189, alignment: .leading)
                 
                 Text(details.time)
                     .font(Font.custom("Inter", size: 16))
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
                     .frame(width: 229, alignment: .leading)
                 
-                Text("For")
-                    .font(
-                        Font.custom("Inter", size: 20)
-                            .weight(.semibold)
-                    )
-                    .foregroundColor(Color("dark"))
-                    .frame(width: 189, alignment: .leading)
+                HStack{
+                    Text("For")
+                        .font(
+                            Font.custom("Inter", size: 20)
+                                .weight(.semibold)
+                        )
+                        .foregroundColor(Color("dark"))
+                       
+                    Image("Image5")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 20, height: 30)
+                    
+                }
+                .frame(width: 189, alignment: .leading)
+                
                 Text(details.gender)
                     .font(Font.custom("Inter", size: 16))
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
