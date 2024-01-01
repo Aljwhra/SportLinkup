@@ -10,15 +10,8 @@
     "%@" : {
 
     },
-    "%@ %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ %2$@"
-          }
-        }
-      }
+    "%@ hr" : {
+
     },
     "%lld" : {
 
@@ -65,16 +58,10 @@
     "Booking" : {
 
     },
-    "Booking Date:%@" : {
-
-    },
     "Booking ID: %@" : {
 
     },
     "Booking summary" : {
-
-    },
-    "Booking Time:%@" : {
 
     },
     "Cancel" : {
@@ -158,6 +145,9 @@
         }
       }
     },
+    "Date: %@" : {
+
+    },
     "Do you have an account? " : {
       "localizations" : {
         "en" : {
@@ -238,6 +228,9 @@
         }
       }
     },
+    "For" : {
+
+    },
     "Full Name" : {
       "localizations" : {
         "en" : {
@@ -292,6 +285,9 @@
           }
         }
       }
+    },
+    "Login" : {
+
     },
     "Logout" : {
       "localizations" : {
@@ -389,7 +385,7 @@
         }
       }
     },
-    "Players:%lld" : {
+    "Players: %lld" : {
 
     },
     "Please read these terms of service, carefully before using our app operated by us." : {
@@ -401,6 +397,9 @@
           }
         }
       }
+    },
+    "Price" : {
+
     },
     "Privacy Policy" : {
 
@@ -532,7 +531,13 @@
         }
       }
     },
-    "Total Price:%@" : {
+    "Time: %@" : {
+
+    },
+    "Total Price: %@" : {
+
+    },
+    "Total Price: %@ SAR" : {
 
     },
     "Update" : {

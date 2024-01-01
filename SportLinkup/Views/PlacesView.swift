@@ -1,4 +1,4 @@
-//
+
 //  PlacesView.swift
 //  SportLinkup
 //
@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct PlacesView: View {
-    @Environment(\.colorScheme) var colorScheme
+   @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     @StateObject var vm = SportViewModel()
     var sportTitle: String
     
     var body: some View {
-        NavigationStack{            
-            ScrollView(showsIndicators: false){
+        NavigationStack{
+            ScrollView{
                 
                 VStack{
                     
@@ -41,8 +41,20 @@ struct PlacesView: View {
             .onAppear{
                 vm.fetchData()
             }
-           .navigationTitle(sportTitle)
-            .navigationBarBackButtonHidden(false)
+            .navigationTitle(sportTitle)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left")
+                                .foregroundColor( Color.primary)
+                            .flipsForRightToLeftLayoutDirection(true)
+                    }
+                }
+            }
+        }
+        .onAppear {
+            print("##", AuthService.shared.path)
         }
     }
 }
@@ -50,4 +62,3 @@ struct PlacesView: View {
 #Preview {
     PlacesView(sportTitle: "")
 }
-

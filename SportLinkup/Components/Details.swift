@@ -38,11 +38,9 @@ struct Details: View {
             
             VStack(alignment: .leading, spacing: 15){
                 Text(details.titile)
-                    .font(
-                        Font.custom("Inter", size: 20)
-                            .weight(.semibold)
-                    )
-                    .foregroundColor(.black)
+                    .font(Font.custom("Inter", size: 20)
+                    .weight(.semibold))
+                    .foregroundColor(Color("dark"))
                     .frame(width: 189, alignment: .leading)
                 
                 Text(details.supTitle)
@@ -55,7 +53,8 @@ struct Details: View {
                         Font.custom("Inter", size: 20)
                             .weight(.medium)
                     )
-                    .foregroundColor(Color(red: 0.04, green: 0.05, blue: 0.12))
+                    .foregroundColor(Color("dark"))
+                    
                     .frame(width: 142, alignment: .leading)
                 Text(details.dcsPlace)
                     .font(Font.custom("Inter", size: 16))
@@ -67,7 +66,7 @@ struct Details: View {
                         Font.custom("Inter", size: 20)
                             .weight(.semibold)
                     )
-                    .foregroundColor(.black)
+                    .foregroundColor(Color("dark"))
                     .frame(width: 189, alignment: .leading)
                 
                 Text(details.time)
@@ -75,7 +74,17 @@ struct Details: View {
                     .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
                     .frame(width: 229, alignment: .leading)
                 
+                Text("For")
+                    .font(
+                        Font.custom("Inter", size: 20)
+                            .weight(.semibold)
+                    )
+                    .foregroundColor(Color("dark"))
+                    .frame(width: 189, alignment: .leading)
                 Text(details.gender)
+                    .font(Font.custom("Inter", size: 16))
+                    .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))
+                    .frame(width: 229, alignment: .leading)
                 
             }.frame(width: 340 ,alignment: .leading)
             
@@ -87,3 +96,4 @@ struct Details: View {
 #Preview {
     Details(details:Sport(typesport: "ci", gender: "wamane",ImageName: URL(string: "https://lh3.googleusercontent.com/p/AF1QipP1gKjsOYYw7lhKh8HmhRg2DVx96xTJ0D5OIyyD=s1360-w1360-h1020")! , titile: "Ad-Diriyah walking", supTitle: "A special path for walking and cycling", place: "Ad", typePlace: "puplic", time: "24hr", date: "02/2/2024", location: "hhh", dcsPlace: "hh"))
 }
+

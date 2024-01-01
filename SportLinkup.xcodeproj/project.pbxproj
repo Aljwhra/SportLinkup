@@ -23,8 +23,6 @@
 		D2417A6D2B396DBB00D89723 /* CardPlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A692B396DBB00D89723 /* CardPlaces.swift */; };
 		D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A6A2B396DBB00D89723 /* CardExplore.swift */; };
 		D2417A702B39703100D89723 /* BookingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A6F2B39703100D89723 /* BookingView.swift */; };
-		D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A712B397C1A00D89723 /* CalendarView.swift */; };
-		D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A732B3990FE00D89723 /* PlayersStepper.swift */; };
 		D2417A762B399C9F00D89723 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A752B399C9F00D89723 /* Time.swift */; };
 		D2417A7A2B3ABAB100D89723 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A782B3ABAB100D89723 /* EditProfileView.swift */; };
 		D2417A7B2B3ABAB100D89723 /* SupabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2417A792B3ABAB100D89723 /* SupabaseHelper.swift */; };
@@ -52,7 +50,6 @@
 		D24D587C2B3D75ED00F65EFF /* ActivitieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */; };
 		D24D587E2B3D889E00F65EFF /* ActivitieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */; };
 		D2E9009B2B3F1C8E003C860A /* BookingTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */; };
-		D2E9009D2B3F2B12003C860A /* MyBooking.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009C2B3F2B12003C860A /* MyBooking.swift */; };
 		D2E9009F2B3F2FFD003C860A /* PopupDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */; };
 		D2E900A12B3F57CC003C860A /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A02B3F57CC003C860A /* BookingViewModel.swift */; };
 		D2E900A32B3F61B5003C860A /* BookingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */; };
@@ -79,8 +76,6 @@
 		D2417A692B396DBB00D89723 /* CardPlaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardPlaces.swift; sourceTree = "<group>"; };
 		D2417A6A2B396DBB00D89723 /* CardExplore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardExplore.swift; sourceTree = "<group>"; };
 		D2417A6F2B39703100D89723 /* BookingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingView.swift; sourceTree = "<group>"; };
-		D2417A712B397C1A00D89723 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
-		D2417A732B3990FE00D89723 /* PlayersStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersStepper.swift; sourceTree = "<group>"; };
 		D2417A752B399C9F00D89723 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		D2417A782B3ABAB100D89723 /* EditProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		D2417A792B3ABAB100D89723 /* SupabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SupabaseHelper.swift; sourceTree = "<group>"; };
@@ -108,7 +103,6 @@
 		D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetailsView.swift; sourceTree = "<group>"; };
 		D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetails.swift; sourceTree = "<group>"; };
 		D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTicket.swift; sourceTree = "<group>"; };
-		D2E9009C2B3F2B12003C860A /* MyBooking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBooking.swift; sourceTree = "<group>"; };
 		D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDetailsView.swift; sourceTree = "<group>"; };
 		D2E900A02B3F57CC003C860A /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryView.swift; sourceTree = "<group>"; };
@@ -210,8 +204,6 @@
 				D2417A682B396DBB00D89723 /* ButtonExplore.swift */,
 				D2417A692B396DBB00D89723 /* CardPlaces.swift */,
 				D2417A6A2B396DBB00D89723 /* CardExplore.swift */,
-				D2417A712B397C1A00D89723 /* CalendarView.swift */,
-				D2417A732B3990FE00D89723 /* PlayersStepper.swift */,
 				D2417A752B399C9F00D89723 /* Time.swift */,
 				D2417A8A2B3ABDC900D89723 /* CardView.swift */,
 				D2417A8C2B3ABDDB00D89723 /* TermsConditionsView.swift */,
@@ -219,7 +211,6 @@
 				D24CBB7B2B3C40B8006EB25F /* Details.swift */,
 				D24CBB7F2B3D36E1006EB25F /* CardActivities.swift */,
 				D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */,
-				D2E9009C2B3F2B12003C860A /* MyBooking.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -357,13 +348,11 @@
 				D2417A842B3ABC9700D89723 /* CustomDatePicker.swift in Sources */,
 				D2417A5B2B396D9500D89723 /* OnboardingItems.swift in Sources */,
 				D2417A862B3ABCA600D89723 /* CustomTextField.swift in Sources */,
-				D2417A742B3990FE00D89723 /* PlayersStepper.swift in Sources */,
 				D2417AA22B3AF53100D89723 /* CreateAccount.swift in Sources */,
 				D24CBB7E2B3D3324006EB25F /* Activities.swift in Sources */,
 				D24CBB7C2B3C40B8006EB25F /* Details.swift in Sources */,
 				D2417A702B39703100D89723 /* BookingView.swift in Sources */,
 				D24CBB802B3D36E1006EB25F /* CardActivities.swift in Sources */,
-				D2E9009D2B3F2B12003C860A /* MyBooking.swift in Sources */,
 				D2417A892B3ABD7700D89723 /* EditProfileViewViewModel.swift in Sources */,
 				D2417A492B396D2600D89723 /* SportLinkupApp.swift in Sources */,
 				D2417A762B399C9F00D89723 /* Time.swift in Sources */,
@@ -371,7 +360,6 @@
 				D2417A972B3AC3FE00D89723 /* Sport.swift in Sources */,
 				D2E9009F2B3F2FFD003C860A /* PopupDetailsView.swift in Sources */,
 				D2417A7E2B3ABC1D00D89723 /* User.swift in Sources */,
-				D2417A722B397C1A00D89723 /* CalendarView.swift in Sources */,
 				D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */,
 				D2417A8B2B3ABDC900D89723 /* CardView.swift in Sources */,
 				D2417A6B2B396DBB00D89723 /* HaderExplore.swift in Sources */,

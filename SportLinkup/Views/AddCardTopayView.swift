@@ -16,7 +16,8 @@ struct AddCardTopayView: View {
     let timePrice: TimePrice
     var date: Date
     var digitData: Int
-    //    @StateObject var carVM = CardViewModel()
+    let onDismiss: () -> ()
+//    @StateObject var carVM = CardViewModel()
     @State var cardNumber: String = ""
     @State var cardHolder: String = ""
     @State var expairDate: Date = Date()
@@ -112,7 +113,7 @@ struct AddCardTopayView: View {
                         VStack(alignment: .leading){
                             Text("Card Number")
                                 .offset()
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                             TextField("", text: $cardNumber)
                             
                             if (cardNumber.count != 16 ){
@@ -136,7 +137,7 @@ struct AddCardTopayView: View {
                         VStack(alignment: .leading){
                             Text("Full Name")
                                 .offset()
-                                .foregroundColor(.black)
+                                .foregroundColor(.primary)
                             TextField("", text: $cardHolder)
                             if (cardHolder.isEmpty ){
                                 Text(cardHolderError)
@@ -160,7 +161,7 @@ struct AddCardTopayView: View {
                             VStack(alignment: .leading){
                                 Text("CVV")
                                     .offset()
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.primary)
                                 
                                 TextField("", text: $cvvNumber)
                                 if cvvNumber.count != 3 {
@@ -184,7 +185,7 @@ struct AddCardTopayView: View {
                             VStack(alignment: .leading) {
                                 Text("Expiry Date")
                                     .offset()
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.primary)
                                 
                                 
                                 DatePicker("", selection: $expairDate, displayedComponents: .date)
@@ -232,36 +233,36 @@ struct AddCardTopayView: View {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(Color("mygreen"))
                         .font(.largeTitle)
-                    Text("Payment Received Successfully")
+                        Text("Payment Received Successfully")
                         .padding(.top)
                 }
                 
-                //            .padding()
+    //            .padding()
                 .frame(maxWidth: .infinity)
                 .padding(.vertical , 18)
                 .padding()
                 .background(Color.white)
                 .cornerRadius(12)
-                
+               
                 .padding()
-                
+               
             }
             
         }
         
         
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarBackButtonHidden()
-        .toolbar {
-            ToolbarItem(placement: .topBarLeading) {
-                Button(action: { dismiss() }) {
-                    Image(systemName: "chevron.left")
-                        .foregroundColor( Color.black)
-                        .flipsForRightToLeftLayoutDirection(true)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor( Color.primary)
+                            .flipsForRightToLeftLayoutDirection(true)
+                    }
                 }
             }
-        }
-        
+
     }
     
     @MainActor
@@ -279,6 +280,7 @@ struct AddCardTopayView: View {
                 showAlert.toggle()
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    onDismiss()
                     dismiss()
                 }
                 
@@ -289,7 +291,4 @@ struct AddCardTopayView: View {
     }
 }
 
-//#Preview {
-//    AddCardTopayView(sportID: <#UUID#>, timePrice: <#TimePrice#>, date: <#Date#>, digitData: <#Int#>)
-//}
 

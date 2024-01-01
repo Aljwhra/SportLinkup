@@ -16,6 +16,8 @@ struct BookingSummaryView: View {
     var timePrice: TimePrice
     var sportId: UUID
     
+    let onDismiss: () -> ()
+    
     @State var isNext = false
     
     var body: some View {
@@ -25,33 +27,92 @@ struct BookingSummaryView: View {
             
             Text("Booking summary")
                 .font(.title2)
-                .fontWeight(.semibold)
+                .fontWeight(.medium)
                 .frame(width: 355, alignment: .leading)
                 .padding(.top,30)
+                .padding(.bottom,10)
             
             ScrollView(showsIndicators: false){
                 
-                VStack(alignment: .leading, spacing: 10){
+                VStack(alignment: .leading, spacing: 20){
+                   
+                    VStack(alignment: .leading,spacing: 5){
+                      
+                        HStack{
+                            
+                            Text("Date")
+                                .font(Font.custom("Inter", size: 20)
+                                    .weight(.medium))
+                            Image("date")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 20, height: 30)
+                                
+                        }
+                        
+                        Text("\(date)")
+                            .font(Font.custom("Inter", size: 16))
+                            .foregroundColor(Color(.mygreyText))
+                    }
                     
-                    Text("Date")
-                        .font(.headline)
+                    VStack(alignment: .leading,spacing: 5){
+                        HStack{
+                            Text("Players")
+                                .font(Font.custom("Inter", size: 20)
+                                    .weight(.medium))
+                            
+                            Image("Image1")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 20, height: 30)
+                        }
+                        
+                        Text("\(digitData)")
+                            .font(Font.custom("Inter", size: 16))
+                            .foregroundColor(Color(.mygreyText))
+                    }
                     
-                    Text("\(date)")
-                        .font(Font.custom("Inter", size: 16))
-                        .foregroundColor(Color(.mygreyText))
+                    VStack(alignment: .leading,spacing: 5){
+                        HStack{
+                            Text("Time")
+                                .font(Font.custom("Inter", size: 20)
+                                    .weight(.medium))
+                            Image("Image2")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 20, height: 30)
+                            
+                        }
+                        
+                        Text("\(timePrice.time) hr")
+                            .font(Font.custom("Inter", size: 16))
+                            .foregroundColor(Color(.mygreyText))
+                    }
+
+                   
+              
+                    Rectangle()
+                        .fill(Color("mygreen"))
+                        .frame(width: 345, height: 1)
+                        .padding(.top)
                     
-                    Text("Players")
-                        .font(.headline)
-                    
-                    Text("\(digitData)")
-                    
-                    Text("Time")
-                        .font(.headline)
-                    
-                    
-                    Text("\(timePrice.time) \(timePrice.price)")
-                        .font(Font.custom("Inter", size: 16))
-                        .foregroundColor(Color(.mygreyText))
+                    VStack(alignment: .leading,spacing: 5){
+                       
+                        HStack{
+                            Text("Price")
+                                .font(Font.custom("Inter", size: 20)
+                                    .weight(.medium))
+                            
+                            Image("Image3")
+                                .resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .frame(width: 20, height: 27)
+                        }
+                        
+                        Text("Total Price: \(timePrice.price) SAR")
+                            .font(Font.custom("Inter", size: 16))
+                            .foregroundColor(Color(.mygreyText))
+                    }
                 }
                 
                 
@@ -59,8 +120,8 @@ struct BookingSummaryView: View {
             
             HStack(alignment: .center, spacing: 0) {
                 NavigationLink {
-                    AddCardTopayView(sportID: sportId, timePrice: timePrice, date: date, digitData: digitData)
-                    
+                    AddCardTopayView(sportID: sportId, timePrice: timePrice, date: date, digitData: digitData, onDismiss: onDismiss)
+                   
                 } label: {
                     Text("Next")
                         .frame(maxWidth: .infinity)
@@ -70,14 +131,15 @@ struct BookingSummaryView: View {
                 }
             }
             .padding(.top, 45)
-            .padding(11)
+            .padding(15)
+            
             .navigationBarBackButtonHidden()
             .navigationTitle("Booking")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: { dismiss() }) {
                         Image(systemName: "chevron.left")
-                            .foregroundColor( Color.black)
+                            .foregroundColor( Color.primary)
                             .flipsForRightToLeftLayoutDirection(true)
                     }
                 }
@@ -88,7 +150,4 @@ struct BookingSummaryView: View {
 }
 
 
-#Preview {
-    BookingSummaryView(date: Date(), digitData: 0, timePrice: .init(id: 0, time: "", price: ""), sportId: UUID())
-}
 

@@ -33,21 +33,21 @@ struct BookingView: View {
         .init(id: 5, time: "1-7", price: "700"),
         .init(id: 6, time: "1-8", price: "800"),
         .init(id: 7, time: "1-9", price: "900")
-    ]
+     ]
     @State var selectedTimePrice: Int = 0
     
     var body: some View {
         
         
         VStack{
-            
+                
             ScrollView(showsIndicators: false){
                 
                 VStack(alignment: .leading){
                     
                     Text("Select")
-                        .font(.title2)
-                        .fontWeight(.semibold)
+                        .font(Font.custom("Inter", size: 20)
+                        .weight(.semibold))
                     
                     
                 }
@@ -58,6 +58,8 @@ struct BookingView: View {
                 VStack{
                     DatePicker("Birthday", selection: $date, displayedComponents: .date)
                         .accentColor(Color("mygreen"))
+                        .font(Font.custom("Inter", size: 20))
+                    
                     
                         .background(RoundedRectangle(cornerRadius: 20)
                             .fill(colorScheme == .dark ? Color.black.opacity(0.6) : Color.white)
@@ -67,13 +69,13 @@ struct BookingView: View {
                     
                     
                         .datePickerStyle(.graphical)
-                        .frame(width: 350)
+                        .frame(width: 345)
                 }
                 
                 HStack{
                     Text("Players")
-                        .font(.title2)
-                        .fontWeight(.semibold)
+                        .font(Font.custom("Inter", size: 20)
+                        .weight(.semibold))
                     
                     Spacer()
                     Button{
@@ -83,14 +85,15 @@ struct BookingView: View {
                         }
                     } label: {
                         Image (systemName: "minus")
-                            .frame(width: 35, height: 35, alignment: .center)
+                            .frame(width: 30, height: 30, alignment: .center)
                             .background(Color("mygrey"))
                             .cornerRadius(10)
                         
                     }
                     
                     Text("\(digitData)")
-                        .font(.title)
+                        .font(Font.custom("Inter", size: 20)
+                        .weight(.semibold))
                     
                     Button{
                         if digitData == 4 {}
@@ -100,7 +103,7 @@ struct BookingView: View {
                         
                     } label: {
                         Image (systemName: "plus")
-                            .frame(width: 35, height: 35, alignment: .center)
+                            .frame(width: 30, height: 30, alignment: .center)
                             .background(Color("mygreen"))
                             .cornerRadius(10)
                         
@@ -108,17 +111,17 @@ struct BookingView: View {
                     
                 }
                 .padding()
+        
+                Rectangle()
+                    .fill(Color("mygreen"))
+                    .frame(width: 345, height: 1)
                 
-                Divider()
-                    .background(Color("mygreen"))
-                    .frame(width: 345)
                 
-                
-                
+               
                 VStack(alignment: .leading){
                     Text("Time")
-                        .font(.title2)
-                        .fontWeight(.semibold)
+                        .font(Font.custom("Inter", size: 20)
+                        .weight(.semibold))
                 }
                 .frame(width: 350,alignment: .leading)
                 
@@ -132,26 +135,30 @@ struct BookingView: View {
                 
                 HStack(alignment: .center, spacing: 0) {
                     NavigationLink {
-                        BookingSummaryView(date:date, digitData: digitData, timePrice: arryTime[selectedTimePrice], sportId: sportId )
+                        BookingSummaryView(date:date, digitData: digitData, timePrice: arryTime[selectedTimePrice], sportId: sportId ) {
+                            dismiss()
+                        }
                     } label: {
                         Text("Next")
+                            .foregroundStyle(.black)
                             .frame(maxWidth: .infinity)
                             .padding(16)
                             .background(Color.mygreen)
                             .cornerRadius(10)
                     }
                 }
+                .padding(.horizontal,15)
                 .padding(.top, 45)
             }
-            .padding(11)
-            .padding(.top)
+
+        
             .navigationTitle(sportTitle)
             .navigationBarBackButtonHidden()
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: { dismiss() }) {
                         Image(systemName: "chevron.left")
-                            .foregroundColor( Color.black)
+                            .foregroundColor( Color.primary)
                             .flipsForRightToLeftLayoutDirection(true)
                     }
                 }
@@ -163,4 +170,3 @@ struct BookingView: View {
 #Preview {
     BookingView(sportId: UUID(), sportTitle: "")
 }
-

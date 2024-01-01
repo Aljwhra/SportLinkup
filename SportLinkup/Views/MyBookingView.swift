@@ -17,12 +17,13 @@ struct MyBookingView: View {
      
         ScrollView{
             
-            VStack{
+     
               
                 
                 ForEach(tickets) { ticket in
-                    VStack(spacing: 15){
-                        HStack {
+                    
+                    VStack{
+                        HStack{
                             if let sport = sports.first(where: { $0.id == ticket.idSport }) {
                                 AsyncImage(url: sport.ImageName){ result in
                                     
@@ -30,8 +31,8 @@ struct MyBookingView: View {
                                         image
                                             .resizable()
                                             .aspectRatio(contentMode: .fill)
-                                            .frame(width: 130, height: 130)
-                                            .cornerRadius(15)
+                                            .frame(width: 110, height: 170)
+                                            .clipped()
                                         
                                     }else{
                                         ProgressView()
@@ -40,32 +41,37 @@ struct MyBookingView: View {
                                     
                                 }
                                 
-                                VStack(alignment: .leading){
+                                VStack(alignment: .leading, spacing: 10){
                                     Text(sport.titile)
-                                    Text(sport.supTitle)
-                                    Text(sport.place)
-                                }.frame(width: 185, alignment: .leading)
+                                        .font(Font.custom("Inter", size: 16)
+                                        .weight(.semibold))
+                                    
+                                    VStack(alignment: .leading, spacing: 5){
+                                        
+                                        Text("Booking ID: \(String(ticket.id.uuidString.suffix(8)))")
+                                        Text("Date: \(ticket.date)")
+                                        Text("Time: \(ticket.time)")
+                                        Text("Players: \(ticket.numPlayers)")
+                                        Text("Total Price: \(ticket.price)")
+                                    }
+                                    .font(Font.custom("Inter", size: 13)
+                                    .weight(.medium))
+                                }
+                                .frame(width: 250,alignment: .leading )
+                                .padding(.horizontal)
+                            
                             }
                         }
+                        .frame(width: 346, height: 170)
+                        .background(Color(red: 0.83, green: 0.91, blue: 0.91).opacity(0.39))
+                        .cornerRadius(15)
+                     
                         
-                        VStack(alignment: .leading){
-                            Text("Booking ID: \(ticket.id)")
-                            Text("Booking Date:\(ticket.date)")
-                            Text("Booking Time:\(ticket.time)")
-                            Text("Players:\(ticket.numPlayers)")
-                            Text("Total Price:\(ticket.price)")
-                        }.padding(.horizontal)
-                    }
-                    .frame(width: 345, height: 275)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color("mygreen"), lineWidth: 1.5)
-                    )
-                    
+                   }
+                    .padding(.top,10)
                 }
-               
                 
-            }
+           
             .navigationTitle("My Booking")
             .navigationBarBackButtonHidden(false)
         }
@@ -102,11 +108,3 @@ struct MyBookingView: View {
         }
     }
 }
-
-
-//#Preview {
-//
-//    MyBookingView(myBooking: BookingTicket(idSport: UUID(), idUser: UUID(), numPlayers: 2, time: "r", date: Date(), price: 3), cardPlaces: Sport(typesport: "ci", gender: "wamane",ImageName: URL(string: "https://lh3.googleusercontent.com/p/AF1QipP1gKjsOYYw7lhKh8HmhRg2DVx96xTJ0D5OIyyD=s1360-w1360-h1020")! , titile: "Ad-Diriyah walking", supTitle: "A special path for walking and cycling", place: "Ad", typePlace: "puplic", time: "24hr", date: "02/2/2024", location: "hhh", dcsPlace: "hh"))
-//}
-//
-

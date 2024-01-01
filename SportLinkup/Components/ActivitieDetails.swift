@@ -57,6 +57,7 @@ struct ActivitieDetails: View {
                     )
                     .foregroundColor(Color(red: 0.04, green: 0.05, blue: 0.12))
                     .frame(width: 142, alignment: .leading)
+                
 //                Text(details.)
 //                    .font(Font.custom("Inter", size: 16))
 //                    .foregroundColor(Color(red: 0.48, green: 0.46, blue: 0.46))

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
-    
+    @Environment(\.colorScheme) var colorScheme
     @Environment(\.dismiss) var dismiss
     
     @State var searchText: String = ""
@@ -20,8 +20,8 @@ struct SearchView: View {
         NavigationStack {
             VStack{
           
-                ScrollView(showsIndicators: false){
-                    
+                
+                List {
                     ForEach(filtered) { sport in
                         NavigationLink(
                             destination: DetailsView(sportTitle: sport.typesport, sportId:sport.id),
@@ -30,9 +30,9 @@ struct SearchView: View {
                                 
                             })
                     }
-                }
                     
-             
+                }
+                .listStyle(.plain)
                 .searchable(text: $searchText)
                 .onChange(of: searchText) { oldValue, newValue in
                     filtered = sports.filter {
@@ -42,7 +42,6 @@ struct SearchView: View {
                
                 
             }
-            .padding()
             .navigationBarBackButtonHidden()
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Search")
@@ -54,7 +53,7 @@ struct SearchView: View {
                     } label: {
                         Image(systemName: "chevron.backward")
                             .font(.system(size: 20))
-                            .foregroundStyle(.black)
+//                            .foregroundStyle(.black)
                     }
                 }
             }

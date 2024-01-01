@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CreateAccount: View {
     
-//    @Binding var didOnboard: Bool
+    //    @Binding var didOnboard: Bool
     @Environment(\.dismiss) var dismiss
     let dismissSignIn: () -> ()
     
@@ -21,25 +21,25 @@ struct CreateAccount: View {
     var body: some View {
         
         VStack{
-         
-        
+            
+            
             VStack(alignment: .leading, spacing: 0) {
                 Text("Welcome to\n SportLinkup")
                     .multilineTextAlignment(.leading)
-                    
-                 
+                
+                
                     .font(.title)
-
-             
+                
+                
                 Text("Create an account to save your time \n and effort in searching for sport\n places easily")
                 
                 
-
+                
                     .multilineTextAlignment(.leading)
                     .foregroundStyle(.gray)
-                  
+                
                     .padding(.top, 24)
-                   
+                
                 Text("Email")
                     .font(.title3)
                     .foregroundStyle(.black)
@@ -48,12 +48,11 @@ struct CreateAccount: View {
                 TextField("Enter Your Email", text: $email)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    //.cornerRadius(10)
                     .background(RoundedRectangle(cornerRadius: 10)
                         .stroke(Color.mygreen, lineWidth: 1.5)
                     )
                     .padding(.top, 8)
-                    
+                
                 
                 Text("Password")
                     .font(.title3)
@@ -70,13 +69,9 @@ struct CreateAccount: View {
                 
                 Button(action: {
                     signUp()
-//                    isSignUp = true
-                    
                 }, label: {
                     Text("Sign Up")
-                        .font(.title3).bold()
                         .foregroundStyle(.black)
-                        .padding(.horizontal ,100)
                 })
                 
                 .frame(maxWidth: .infinity)
@@ -91,14 +86,14 @@ struct CreateAccount: View {
                     Button("Sign In", action: {
                         dismiss()
                     })
-                        .foregroundStyle(Color.mygreen)
+                    .foregroundStyle(Color.mygreen)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.top, 44)
                 Spacer()
             }
-            .padding(11)
-        
+            .padding(15)
+            
             .edgesIgnoringSafeArea(.bottom)
             .padding(.top,50)
             
@@ -109,7 +104,7 @@ struct CreateAccount: View {
     }
     
     @MainActor
-   func signUp() {
+    func signUp() {
         Task {
             do {
                 networking = true
@@ -120,8 +115,8 @@ struct CreateAccount: View {
                 
                 try await SupabaseHelper.create(object: user, tableName: "User")
                 let result: [User] = try await SupabaseHelper.read(tableName: "User", column: "uid", value: uid)
-
-//                didOnboard = true
+                
+                //                didOnboard = true
                 AuthService.shared.token = token
                 AuthService.shared.user = result.first
                 AuthService.shared.loggedIn = true
@@ -131,14 +126,10 @@ struct CreateAccount: View {
                 networking = false
                 print(error)
             }
-      
+            
         }
-     }
-
-//    func guest() {
-//        didOnboard = true
-//        AuthService.shared.loggedIn = true
-//    }
+    }
+    
     
     
 }

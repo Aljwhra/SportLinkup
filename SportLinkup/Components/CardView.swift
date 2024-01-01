@@ -30,7 +30,9 @@ struct CardView: View {
             HStack {
                 Spacer()
                 Image("visa")
+                   
                     .resizable()
+               
                     .frame(width: 44, height: 14)
             }
         }
@@ -38,7 +40,8 @@ struct CardView: View {
         .frame(width: 250)
         .frame(height: 140)
         .background {
-            Color.black
+            Color("color2")
+              
         }
         .cornerRadius(16)
         
@@ -47,3 +50,4 @@ struct CardView: View {
 #Preview {
     CardView()
 }
+

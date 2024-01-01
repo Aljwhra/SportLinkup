@@ -13,7 +13,8 @@ final class AuthService: ObservableObject {
     
     @Published var user: User? = nil
     var token: String = ""
+    @Published var path: [Int] = []
     
     @Published var loggedIn: Bool = false
     @Published var isDarkMode: Bool = false
-}
+    }

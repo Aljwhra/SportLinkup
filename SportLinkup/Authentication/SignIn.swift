@@ -8,7 +8,7 @@ import SwiftUI
 
 struct SignIn: View {
     
-//    @Binding var didOnboard: Bool
+    //    @Binding var didOnboard: Bool
     
     @Environment(\.dismiss) var dismiss
     
@@ -22,8 +22,8 @@ struct SignIn: View {
     var body: some View {
         NavigationStack {
             VStack{
-           
-            
+                
+                
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Welcome Back")
                         .frame(maxWidth: .infinity)
@@ -37,12 +37,12 @@ struct SignIn: View {
                     TextField("Enter Your Email", text: $email)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        //.cornerRadius(10)
+                    //.cornerRadius(10)
                         .background(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.mygreen, lineWidth: 1.5)
                         )
                         .padding(.top, 8)
-                        
+                    
                     
                     Text("Password")
                         .font(.title3)
@@ -62,10 +62,10 @@ struct SignIn: View {
                         login()
                     }, label: {
                         Text("Sign In")
-                            .font(.title3).bold()
                             .foregroundStyle(.black)
-                            .padding(.horizontal ,100)
+                        
                     })
+                    
                     .frame(maxWidth: .infinity)
                     .padding(16)
                     .background(Color.mygreen)
@@ -85,12 +85,12 @@ struct SignIn: View {
                     .padding(.top, 45)
                     Spacer()
                 }
-                .padding(11)
-               
-
-     
+                .padding(15)
+                
+                
+                
                 .edgesIgnoringSafeArea(.bottom)
-              
+                
                 
                 
             }
@@ -104,7 +104,7 @@ struct SignIn: View {
                             .foregroundColor(.gray)
                             .font(.title)
                     }
-
+                    
                 }
             })
         }
