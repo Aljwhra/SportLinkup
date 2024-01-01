@@ -53,7 +53,7 @@ struct SearchView: View {
                     } label: {
                         Image(systemName: "chevron.backward")
                             .font(.system(size: 20))
-//                            .foregroundStyle(.black)
+                            .foregroundColor(Color.primary)
                     }
                 }
             }

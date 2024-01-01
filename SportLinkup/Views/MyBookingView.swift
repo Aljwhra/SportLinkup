@@ -16,10 +16,7 @@ struct MyBookingView: View {
         
      
         ScrollView{
-            
-     
-              
-                
+    
                 ForEach(tickets) { ticket in
                     
                     VStack{

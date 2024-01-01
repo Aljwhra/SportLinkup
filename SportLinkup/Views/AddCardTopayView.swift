@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AddCardTopayView: View {
+    
     @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     
@@ -232,20 +233,23 @@ struct AddCardTopayView: View {
                     
                     VStack{
                         Image(systemName: "checkmark.circle.fill")
+                            .resizable()
+                            .frame(width: 65, height: 65, alignment: .center)
                             .foregroundColor(Color("mygreen"))
                             .font(.largeTitle)
-                            Text("Payment Received Successfully")
+                        
+                        Text("Payment Received\nSuccessfully")
+                          .font(Font.custom("Inter", size: 20))
+                          .multilineTextAlignment(.center)
                             .padding(.top)
+                        
                     }
                     
-     
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical , 18)
-                    .padding()
+                    .frame(maxWidth: 350, maxHeight: 267 )
+                    .padding(.vertical , 20)
                     .background(Color.white)
-                    .cornerRadius(12)
-                   
-                    .padding()
+                    .cornerRadius(20)
+                    
                    
                 }
                 

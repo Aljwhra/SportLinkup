@@ -13,62 +13,67 @@ struct PlacesView: View {
     @StateObject var vm = SportViewModel()
     var sportTitle: String
     
+   
+    
     @Namespace private var basicNS
     @State private var move = false
     
     var body: some View {
-        NavigationStack{
-            ScrollView{
+            NavigationStack{
                 
-                VStack{
+                
+                ScrollView{
                     
-                    
-                    VStack(spacing: 16){
-                        ForEach(vm.sports){ places in
-                            if places.typesport == sportTitle {
-                                NavigationLink(
-                                    destination: 
-                                        DetailsView(sportTitle: sportTitle, sportId: places.id),
-                                    label: {
-                                        CardPlaces(cardPlaces: places)
-                                    })
-//                                    .matchedGeometryEffect(id: places.id, in: basicNS, isSource: true)
-//                                    .onTapGesture {
-//                                        withAnimation {
-//                                            move.toggle()
-//                                        }
-//                                    }
-
+                    VStack{
+                        
+                        
+                        VStack(spacing: 16){
+                            ForEach(vm.sports){ places in
+                                if places.typesport == sportTitle {
+                                    NavigationLink(
+                                        destination:
+                                            DetailsView(sportTitle: sportTitle, sportId: places.id),
+                                        label: {
+                                            CardPlaces(cardPlaces: places)
+                                        })
+                                    //                                    .matchedGeometryEffect(id: places.id, in: basicNS, isSource: true)
+                                    //                                    .onTapGesture {
+                                    //                                        withAnimation {
+                                    //                                            move.toggle()
+                                    //                                        }
+                                    //                                    }
+                                    
+                                }
                             }
                         }
+                        .padding(.top,3)
+                        
                     }
-                    .padding(.top,3)
-                   
+                    
+                    .navigationBarBackButtonHidden(true)
+                    
                 }
-                
-                .navigationBarBackButtonHidden(true)
-                
-            }
-            .onAppear{
-                vm.fetchData()
-            }
-            .navigationTitle(sportTitle)
-            .navigationBarBackButtonHidden()
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "chevron.left")
+                .onAppear{
+                    vm.fetchData()
+                }
+                .navigationTitle(sportTitle)
+                .navigationBarBackButtonHidden()
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: { dismiss() }) {
+                            Image(systemName: "chevron.left")
                                 .foregroundColor( Color.primary)
-                            .flipsForRightToLeftLayoutDirection(true)
+                                .flipsForRightToLeftLayoutDirection(true)
+                        }
                     }
                 }
             }
-        }
-        .onAppear {
-            print("##", AuthService.shared.path)
+            .onAppear {
+                print("##", AuthService.shared.path)
+            }
         }
     }
-}
+    
 
 #Preview {
     PlacesView(sportTitle: "")
