@@ -38,128 +38,129 @@ struct BookingView: View {
     
     var body: some View {
         
-        
-        VStack{
+        NavigationStack{
+            VStack{
                 
-            ScrollView(showsIndicators: false){
-                
-                VStack(alignment: .leading){
+                ScrollView(showsIndicators: false){
                     
-                    Text("Select")
-                        .font(Font.custom("Inter", size: 20)
-                        .weight(.semibold))
-                    
-                    
-                }
-                .frame(width: 350,alignment: .leading)
-                .padding(.top)
-                .padding(.bottom)
-                
-                VStack{
-                    DatePicker("Birthday", selection: $date, displayedComponents: .date)
-                        .accentColor(Color("mygreen"))
-                        .font(Font.custom("Inter", size: 20))
-                    
-                    
-                        .background(RoundedRectangle(cornerRadius: 20)
-                            .fill(colorScheme == .dark ? Color.black.opacity(0.6) : Color.white)
-                            .stroke(Color("mygreen"), lineWidth: 1)
-                                    
-                        )
-                    
-                    
-                        .datePickerStyle(.graphical)
-                        .frame(width: 345)
-                }
-                
-                HStack{
-                    Text("Players")
-                        .font(Font.custom("Inter", size: 20)
-                        .weight(.semibold))
-                    
-                    Spacer()
-                    Button{
-                        if digitData == 0 {}
-                        else{
-                            digitData = digitData - 1
-                        }
-                    } label: {
-                        Image (systemName: "minus")
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .background(Color("mygrey"))
-                            .cornerRadius(10)
+                    VStack(alignment: .leading){
+                        
+                        Text("Select")
+                            .font(Font.custom("Inter", size: 20)
+                                .weight(.semibold))
+                        
                         
                     }
+                    .frame(width: 350,alignment: .leading)
+                    .padding(.top)
+                    .padding(.bottom)
                     
-                    Text("\(digitData)")
-                        .font(Font.custom("Inter", size: 20)
-                        .weight(.semibold))
-                    
-                    Button{
-                        if digitData == 4 {}
-                        else{
-                            digitData = digitData + 1
-                        }
+                    VStack{
+                        DatePicker("Birthday", selection: $date, displayedComponents: .date)
+                            .accentColor(Color("mygreen"))
+                            .font(Font.custom("Inter", size: 20))
                         
-                    } label: {
-                        Image (systemName: "plus")
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .background(Color("mygreen"))
-                            .cornerRadius(10)
                         
+                            .background(RoundedRectangle(cornerRadius: 20)
+                                .fill(colorScheme == .dark ? Color.black.opacity(0.6) : Color.white)
+                                .stroke(Color("mygreen"), lineWidth: 1)
+                                        
+                            )
+                        
+                        
+                            .datePickerStyle(.graphical)
+                            .frame(width: 345)
                     }
                     
-                }
-                .padding()
-        
-                Rectangle()
-                    .fill(Color("mygreen"))
-                    .frame(width: 345, height: 1)
-                
-                
-               
-                VStack(alignment: .leading){
-                    Text("Time")
-                        .font(Font.custom("Inter", size: 20)
-                        .weight(.semibold))
-                }
-                .frame(width: 350,alignment: .leading)
-                
-                ScrollView(.horizontal){
                     HStack{
-                        ForEach(arryTime) { item in
-                            Time(item: item, selected: $selectedTimePrice)
+                        Text("Players")
+                            .font(Font.custom("Inter", size: 20)
+                                .weight(.semibold))
+                        
+                        Spacer()
+                        Button{
+                            if digitData == 0 {}
+                            else{
+                                digitData = digitData - 1
+                            }
+                        } label: {
+                            Image (systemName: "minus")
+                                .frame(width: 30, height: 30, alignment: .center)
+                                .background(Color("mygrey"))
+                                .cornerRadius(10)
+                            
                         }
-                    }.padding()
+                        
+                        Text("\(digitData)")
+                            .font(Font.custom("Inter", size: 20)
+                                .weight(.semibold))
+                        
+                        Button{
+                            if digitData == 4 {}
+                            else{
+                                digitData = digitData + 1
+                            }
+                            
+                        } label: {
+                            Image (systemName: "plus")
+                                .frame(width: 30, height: 30, alignment: .center)
+                                .background(Color("mygreen"))
+                                .cornerRadius(10)
+                            
+                        }
+                        
+                    }
+                    .padding()
+                    
+                    Rectangle()
+                        .fill(Color("mygreen"))
+                        .frame(width: 345, height: 1)
+                    
+                    
+                    
+                    VStack(alignment: .leading){
+                        Text("Time")
+                            .font(Font.custom("Inter", size: 20)
+                                .weight(.semibold))
+                    }
+                    .frame(width: 350,alignment: .leading)
+                    
+                    ScrollView(.horizontal,showsIndicators: false){
+                        HStack{
+                            ForEach(arryTime) { item in
+                                Time(item: item, selected: $selectedTimePrice)
+                            }
+                        }.padding()
+                    }
+                    
+                    HStack(alignment: .center, spacing: 0) {
+                        NavigationLink {
+                            BookingSummaryView(date:date, digitData: digitData, timePrice: arryTime[selectedTimePrice], sportId: sportId ) {
+                                dismiss()
+                            }
+                        } label: {
+                            Text("Next")
+                                .foregroundStyle(.black)
+                                .frame(maxWidth: .infinity)
+                                .padding(16)
+                                .background(Color.mygreen)
+                                .cornerRadius(10)
+                        }
+                    }
+                    .padding(.horizontal,15)
+                    .padding(.top, 45)
                 }
                 
-                HStack(alignment: .center, spacing: 0) {
-                    NavigationLink {
-                        BookingSummaryView(date:date, digitData: digitData, timePrice: arryTime[selectedTimePrice], sportId: sportId ) {
-                            dismiss()
+                
+                .navigationTitle(sportTitle)
+                .navigationBarBackButtonHidden()
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: { dismiss() }) {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor( Color.primary)
+                                .flipsForRightToLeftLayoutDirection(true)
                         }
-                    } label: {
-                        Text("Next")
-                            .foregroundStyle(.black)
-                            .frame(maxWidth: .infinity)
-                            .padding(16)
-                            .background(Color.mygreen)
-                            .cornerRadius(10)
-                    }
-                }
-                .padding(.horizontal,15)
-                .padding(.top, 45)
-            }
-
-        
-            .navigationTitle(sportTitle)
-            .navigationBarBackButtonHidden()
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button(action: { dismiss() }) {
-                        Image(systemName: "chevron.left")
-                            .foregroundColor( Color.primary)
-                            .flipsForRightToLeftLayoutDirection(true)
                     }
                 }
             }

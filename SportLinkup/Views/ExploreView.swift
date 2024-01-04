@@ -12,7 +12,7 @@ struct ExploreView: View {
     
     
     
-    let cardExploreArry = [ 
+    let cardExploreArry = [
         CardExplore(imageName: "Bike2", title: "Cycling", typePlace: "All"),
         CardExplore(imageName: "Tennis2", title: "Padel courts", typePlace: "Private"),
         CardExplore(imageName: "Soccer2", title: "Soccer Fields", typePlace: "Public"),
@@ -24,7 +24,7 @@ struct ExploreView: View {
     
     
     @State private var selectedFilter: FilterType = .All
- 
+    
     
     var filtered: [CardExplore] {
         switch selectedFilter {
@@ -36,9 +36,9 @@ struct ExploreView: View {
             return cardExploreArry.filter { $0.typePlace  == "Private" }
         }
     }
-
-
-
+    
+    
+    
     
     var body: some View {
         NavigationStack{
@@ -57,20 +57,16 @@ struct ExploreView: View {
                                 destination: PlacesView(sportTitle: explore.title ),
                                 label: {
                                     explore
-                                        
+                                    
                                 })
                         }
                     }
-                   
+                    
                 }
                 .padding(.top)
                 
                 
             }
-            
-            
-            
-            
         }
     }
 }

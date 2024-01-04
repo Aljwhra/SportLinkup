@@ -9,12 +9,11 @@
 import SwiftUI
 
 struct AddCardTopayView: View {
-    
     @Environment(\.dismiss) var dismiss
     @Environment(\.presentationMode) var presentationMode
     
     @State var alertToNavigate: Bool = false
-    
+    @Environment(\.colorScheme) var colorScheme
     
     let sportID: UUID
     let timePrice: TimePrice
@@ -213,15 +212,6 @@ struct AddCardTopayView: View {
                             .cornerRadius(12)
                     }
                     
-    //                Button {
-    //                    presentationMode.wrappedValue.dismiss()
-    //                } label: {
-    //
-    //                }
-                    
-                    
-                    
-                    
                 }
                 .padding(.horizontal)
                 
@@ -233,40 +223,38 @@ struct AddCardTopayView: View {
                     
                     VStack{
                         Image(systemName: "checkmark.circle.fill")
-                            .resizable()
-                            .frame(width: 65, height: 65, alignment: .center)
                             .foregroundColor(Color("mygreen"))
                             .font(.largeTitle)
-                        
-                        Text("Payment Received\nSuccessfully")
-                          .font(Font.custom("Inter", size: 20))
-                          .multilineTextAlignment(.center)
+                            .foregroundColor(colorScheme == .dark ? Color.white : Color.teal)
+                        Text("Payment Received Successfully")
                             .padding(.top)
-                        
+                            .foregroundColor(colorScheme == .dark ? Color.white : Color.teal)
                     }
                     
-                    .frame(maxWidth: 350, maxHeight: 267 )
-                    .padding(.vertical , 20)
-                    .background(Color.white)
-                    .cornerRadius(20)
                     
-                   
+                    .frame(maxWidth: .infinity)
+                    .padding(.vertical , 18)
+                    .padding()
+                    .background(colorScheme == .dark ? Color.white : Color.white)
+                    .cornerRadius(12)
+                    .padding()
+                    
                 }
                 
             }
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarBackButtonHidden()
-                .toolbar {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(action: { dismiss() }) {
-                            Image(systemName: "chevron.left")
-                                .foregroundColor( Color.primary)
-                                .flipsForRightToLeftLayoutDirection(true)
-                        }
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden()
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "chevron.left")
+                            .foregroundColor( Color.primary)
+                            .flipsForRightToLeftLayoutDirection(true)
                     }
                 }
+            }
         }
-
+        
     }
     
     @MainActor
@@ -285,7 +273,7 @@ struct AddCardTopayView: View {
                 showAlert.toggle()
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                  //  ExploreView()
+                    ExploreView()
                     self.alertToNavigate = true
                 }
                 
@@ -295,5 +283,4 @@ struct AddCardTopayView: View {
         }
     }
 }
-
 

@@ -25,19 +25,18 @@ struct DetailsView: View {
     var sportTitle: String
     var sportId: UUID
     
-    @Namespace private var basicNS
-    @State private var move = false
+    
     
     var body: some View {
         
         NavigationStack{
             ZStack{
-                ScrollView {
+                ScrollView(showsIndicators: false){
                     
                     ForEach(vm.sports){ detail in
                         if detail.id == sportId {
                             Details(details: detail)
-                            //                            .matchedGeometryEffect(id: move ? "basic" : "", in: basicNS, isSource: false)
+                            
                             
                         }
                     }
@@ -65,7 +64,7 @@ struct DetailsView: View {
                                 } else {
                                     
                                     Button(action: {
-                                        showAlert = true
+                                        showSignInAlert.toggle()
                                     }, label: {
                                         Text("BooK")
                                             .frame(maxWidth: .infinity)
@@ -102,57 +101,7 @@ struct DetailsView: View {
                     }.padding(.top,10)
                 }
                 
-                if showAlert{
-                    
                 
-                        Color.black.opacity(0.5)
-                            .ignoresSafeArea()
-                        
-                    VStack(alignment: .center, spacing: 20){
-                        
-                        VStack{
-                            Text("To Book you need\n to sing in")
-                                .font(Font.custom("Inter", size: 20))
-                                .multilineTextAlignment(.center)
-                                .foregroundColor(.black)
-                        }
-                        
-                            Button(action: {
-                                
-                                showSignInView = true
-                                
-                            },label: {
-                                Text("Sign In")
-                                    .foregroundStyle(.black)
-                                    .frame(width: 264, alignment: .center)
-                                    .padding(.horizontal, 0)
-                                    .padding(.vertical, 10)
-                            })
-                        
-                            .background(Color("mygreen"))
-                            .cornerRadius(10)
-                        
-                            .fullScreenCover(isPresented: $showSignInView, content: {
-                                SignIn()
-                            })
-                        
-                        HStack {
-                            Text("You don't have an account?")
-                                .foregroundStyle(Color.gray)
-                            NavigationLink("Sign Up") {
-                                CreateAccount {
-                                    dismiss()
-                                }
-                            }
-                        }
-                           
-                        }
-                        .frame(maxWidth: 350, maxHeight: 267 )
-                        .background(.white)
-                        .cornerRadius(20)
-
-                } 
-                    
             }
             .padding(.top,10)
             .navigationTitle(sportTitle)
@@ -168,26 +117,28 @@ struct DetailsView: View {
             }
             .navigationBarBackButtonHidden(true)
             
-       
             
+            
+            
+            .onAppear{
+                vm.fetchData()
+            }
         }
-        .onAppear{
-            vm.fetchData()
-        }
+        .alert("Sign In", isPresented: $showSignInAlert, actions: {
+            Button("Sign In") {
+                showSignInView.toggle()
+            }
+            Button("Cancel", role: .cancel, action: {})
+        })
+        .fullScreenCover(isPresented: $showSignInView, content: {
+            SignIn()
+        })
     }
     
 }
 
 
-//        .alert("Sign In", isPresented: $showSignInAlert, actions: {
-//            Button("Sign In") {
-//                showSignInView.toggle()
-//            }
-//            Button("Cancel", role: .cancel, action: {})
-//        })
-//        .fullScreenCover(isPresented: $showSignInView, content: {
-//            SignIn()
-//        })
+
 
 
 #Preview {

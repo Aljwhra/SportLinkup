@@ -14,15 +14,12 @@ struct PlacesView: View {
     var sportTitle: String
     
    
-    
-    @Namespace private var basicNS
-    @State private var move = false
-    
+ 
     var body: some View {
             NavigationStack{
                 
                 
-                ScrollView{
+                ScrollView(showsIndicators: false){
                     
                     VStack{
                         
@@ -36,12 +33,6 @@ struct PlacesView: View {
                                         label: {
                                             CardPlaces(cardPlaces: places)
                                         })
-                                    //                                    .matchedGeometryEffect(id: places.id, in: basicNS, isSource: true)
-                                    //                                    .onTapGesture {
-                                    //                                        withAnimation {
-                                    //                                            move.toggle()
-                                    //                                        }
-                                    //                                    }
                                     
                                 }
                             }

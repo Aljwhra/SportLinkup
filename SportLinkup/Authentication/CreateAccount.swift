@@ -42,7 +42,7 @@ struct CreateAccount: View {
                     
                     Text("Email")
                         .font(.title3)
-                        .foregroundStyle(.black)
+                        .foregroundColor(Color.primary)
                         .padding(.top, 54)
                     
                     TextField("Enter Your Email", text: $email)
@@ -56,7 +56,7 @@ struct CreateAccount: View {
                     
                     Text("Password")
                         .font(.title3)
-                        .foregroundStyle(.black)
+                        .foregroundColor(Color.primary)
                         .padding(.top, 8)
                     
                     SecureField("Enter Your Password ", text: $password)

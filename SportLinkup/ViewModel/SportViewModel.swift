@@ -11,8 +11,7 @@ import Foundation
 class SportViewModel: ObservableObject {
     
     @Published var sports: [Sport] = []
-    
-    
+  
     
     init(){
         

@@ -1,0 +1,728 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+
+    },
+    " The owner does not provide a list of Personal Data types collected.\n Complete details on each type of Personal Data collected are provided in the dedicated sections of\n this privacy policy or by specific explanation texts displayed prior to the Data collection.\n Personal Data may be freely provided by the User, or, in case of Usage Data, collected automatically\n when using this Application.\n Unless specified otherwise, all Data requested by this Application is mandatory and failure to\n provide this Data may make it impossible for this Application to provide its services.\n In cases where this Application specifically states that some Data is not mandatory, Users are free\n not to communicate this Data without consequences to the availability or the functioning of the Service.\n Users who are uncertain about which Personal Data is mandatory are welcome to contact the Owner.\n Any use of Cookies – or of other tracking tools — by this Application or by the owners of third-party\n services used by this Application serves the purpose of providing the Service required by the User, in\n addition to any other purposes described in the present document and in the Cookie Policy.\n Users are responsible for any third-party Personal Data obtained, published or shared through this Application." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "لا يقدم المالك قائمة بأنواع البيانات الشخصية التي تم جمعها.\n تتوفر تفاصيل كاملة عن كل نوع من البيانات الشخصية التي تم جمعها في الأقسام المخصصة في\n سياسة الخصوصية هذه أو من خلال نصوص توضيحية محددة يتم عرضها قبل جمع البيانات.\n قد يتم توفير البيانات الشخصية بحرية من قبل المستخدم، أو، في حالة بيانات الاستخدام، يمكن جمعها تلقائيًا\n عند استخدام هذا التطبيق.\n ما لم ينص على خلاف ذلك، فإن جميع البيانات التي يطلبها هذا التطبيق إلزامية ويجب عدم القيام بذلك\n تقديم هذه البيانات قد يجعل من المستحيل على هذا التطبيق تقديم خدماته.\n في الحالات التي ينص فيها هذا التطبيق على وجه التحديد على أن بعض البيانات ليست إلزامية، يكون المستخدمون أحرارًا\n عدم إرسال هذه البيانات دون عواقب على توفر الخدمة أو عملها.\n نرحب بالمستخدمين غير المؤكدين بشأن البيانات الشخصية الإلزامية للاتصال بالمالك.\n أي استخدام لملفات تعريف الارتباط – أو أدوات التتبع الأخرى – عن طريق هذا التطبيق أو من قبل مالكي الطرف الثالث\n الخدمات التي يستخدمها هذا التطبيق تخدم غرض توفير الخدمة المطلوبة من قبل المستخدم، في\n بالإضافة إلى أي أغراض أخرى موضحة في هذه الوثيقة وفي سياسة ملفات تعريف الارتباط.\n يتحمل المستخدمون مسؤولية أي بيانات شخصية خاصة بطرف ثالث يتم الحصول عليها أو نشرها أو مشاركتها من خلال هذا التطبيق."
+          }
+        }
+      }
+    },
+    "%@" : {
+
+    },
+    "%@ hr" : {
+
+    },
+    "%lld" : {
+
+    },
+    "1234 1234 1234 1234" : {
+
+    },
+    "Activities" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الفعاليات"
+          }
+        }
+      }
+    },
+    "All" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الكل "
+          }
+        }
+      }
+    },
+    "Apple Pay" : {
+
+    },
+    "Birthday" : {
+
+    },
+    "BooK" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "احجز"
+          }
+        }
+      }
+    },
+    "Booking" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الحجز"
+          }
+        }
+      }
+    },
+    "Booking ID: %@" : {
+
+    },
+    "Booking summary" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الحجز الخاص بك"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الغاء"
+          }
+        }
+      }
+    },
+    "Card Number" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "رقم البطاقة"
+          }
+        }
+      }
+    },
+    "Change Language" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تغير اللغه"
+          }
+        }
+      }
+    },
+    "confirme" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تأكيد"
+          }
+        }
+      }
+    },
+    "Create an account to save your time \n and effort in searching for sport\n places easily" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "قم بإنشاء حساب لتوفير وقتك والجهد في البحث عن الرياضة"
+          }
+        }
+      }
+    },
+    "CVV" : {
+
+    },
+    "Cycling" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دراجات هوائية"
+          }
+        }
+      }
+    },
+    "Dark Mode" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الوضع الليلي"
+          }
+        }
+      }
+    },
+    "Date" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "التاريخ"
+          }
+        }
+      }
+    },
+    "Date of brith" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تاريخ الميلاد"
+          }
+        }
+      }
+    },
+    "Date: %@" : {
+
+    },
+    "Do you have an account? " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "هل لديك حساب ؟"
+          }
+        }
+      }
+    },
+    "Edit Profile" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تعديل الملف الشخصي"
+          }
+        }
+      }
+    },
+    "Email" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "البريد الإلكتروني"
+          }
+        }
+      }
+    },
+    "Email Address" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "عنوان البريد الإلكتروني"
+          }
+        }
+      }
+    },
+    "Enter Your Email" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ادخل البريد الإلكتروني"
+          }
+        }
+      }
+    },
+    "Enter Your Password " : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ادخل كلمة المرور"
+          }
+        }
+      }
+    },
+    "Expiry Date" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تاريخ الانتهاء"
+          }
+        }
+      }
+    },
+    "Explore" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تصفح"
+          }
+        }
+      }
+    },
+    "Fitness Equipment" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اللياقه البدنيه "
+          }
+        }
+      }
+    },
+    "For" : {
+
+    },
+    "Full Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الاسم بالكامل"
+          }
+        }
+      }
+    },
+    "Hours" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الساعات"
+          }
+        }
+      }
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Last update 31/12/2023" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "آخر تحديث 31/12/2023"
+          }
+        }
+      }
+    },
+    "Latitude: %lf\nLongitude: %lf" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Latitude: %1$lf\nLongitude: %2$lf"
+          }
+        }
+      }
+    },
+    "Login" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تسجيل دخول"
+          }
+        }
+      }
+    },
+    "Logout" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "خروج"
+          }
+        }
+      }
+    },
+    "Master Card" : {
+
+    },
+    "Mobile Number" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "رقم الجوال"
+          }
+        }
+      }
+    },
+    "My Booking" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "حجزي"
+          }
+        }
+      }
+    },
+    "Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الإسم"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "التالي"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "موافق"
+          }
+        }
+      }
+    },
+    "Padel courts" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملاعب البادل"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "كلمة المرور"
+          }
+        }
+      }
+    },
+    "Pay" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ادفع"
+          }
+        }
+      }
+    },
+    "Payment Received Successfully" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تم استلام الدفع بنجاح"
+          }
+        }
+      }
+    },
+    "Players" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "اللاعبين"
+          }
+        }
+      }
+    },
+    "Players: %lld" : {
+
+    },
+    "Please read these terms of service, carefully before using our app operated by us." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "يرجى قراءة شروط الخدمة هذه بعناية قبل استخدام التطبيق."
+          }
+        }
+      }
+    },
+    "Price" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "السعر"
+          }
+        }
+      }
+    },
+    "Privacy Policy" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "سياسة الخصوصية"
+          }
+        }
+      }
+    },
+    "Privacy Policy of SportLinkupApp" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "\nسياسة الخصوصية لتطبيق SportLinkupApp"
+          }
+        }
+      }
+    },
+    "Private" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "خاص "
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الملف الشخصي"
+          }
+        }
+      }
+    },
+    "Public" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "عام"
+          }
+        }
+      }
+    },
+    "Search" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البحث"
+          }
+        }
+      }
+    },
+    "See Activity" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الفعالية"
+          }
+        }
+      }
+    },
+    "See Location" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الموقع"
+          }
+        }
+      }
+    },
+    "Select" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "اختيار"
+          }
+        }
+      }
+    },
+    "Sign In" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تسجيل دخول"
+          }
+        }
+      }
+    },
+    "Sign Up" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تسجيل"
+          }
+        }
+      }
+    },
+    "Skip" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تخطى"
+          }
+        }
+      }
+    },
+    "Soccer Fields" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ملاعب كرة القدم"
+          }
+        }
+      }
+    },
+    "Start" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ابدا"
+          }
+        }
+      }
+    },
+    "Time" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "الوقت"
+          }
+        }
+      }
+    },
+    "Time: %@" : {
+
+    },
+    "Total Price: %@" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "مجموع السعر"
+          }
+        }
+      }
+    },
+    "Total Price: %@ SAR" : {
+
+    },
+    "Update" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "تحديث"
+          }
+        }
+      }
+    },
+    "Visa Card" : {
+
+    },
+    "Walking" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الجري"
+          }
+        }
+      }
+    },
+    "Welcome Back" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "اهلاً بك"
+          }
+        }
+      }
+    },
+    "Welcome to\n SportLinkup" : {
+
+    },
+    "You can discover sports\nvenues on the map" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكنك اكتشاف الرياضة\nالأماكن على الخريطة"
+          }
+        }
+      }
+    },
+    "You can reserve the \nstadiums you want" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكنك حجز\nالملعب الذي تريد"
+          }
+        }
+      }
+    },
+    "You don't have an account?" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ليس لديك حساب؟"
+          }
+        }
+      }
+    },
+    "You will find places\nSports easily" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "سوف تجد الأماكن\nالرياضة بسهولة"
+          }
+        }
+      }
+    },
+    "Your Name" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "اسمك"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

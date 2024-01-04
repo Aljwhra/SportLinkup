@@ -8,24 +8,20 @@ import SwiftUI
 
 struct SignIn: View {
     
-    //    @Binding var didOnboard: Bool
+   
     
     @Environment(\.dismiss) var dismiss
     
-    @State private var email = "Ra@email.com"
-    @State private var password = "123456"
-    
+    @State private var email = ""
+    @State private var password = ""
     @State var networking: Bool = false
     @State var isSignIn = false
     @State var isSignUp = false
+  
     
     var body: some View {
-        
         NavigationStack {
-            
             VStack{
-                
-                
                 VStack(alignment: .leading, spacing: 0) {
                     Text("Welcome Back")
                         .frame(maxWidth: .infinity)
@@ -33,22 +29,20 @@ struct SignIn: View {
                         .padding(.top, 30)
                     Text("Email")
                         .font(.title3)
-                        .foregroundStyle(.black)
+                        .foregroundColor(Color.primary)
                         .padding(.top, 92)
                     
                     TextField("Enter Your Email", text: $email)
                         .frame(maxWidth: .infinity)
                         .padding()
-                    //.cornerRadius(10)
                         .background(RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.mygreen, lineWidth: 1.5)
-                        )
+                            .stroke(Color.mygreen, lineWidth: 1.5))
                         .padding(.top, 8)
                     
                     
                     Text("Password")
                         .font(.title3)
-                        .foregroundStyle(.black)
+                        .foregroundColor(Color.primary)
                         .padding(.top, 15)
                     
                     SecureField("Enter Your Password ", text: $password)
@@ -62,12 +56,12 @@ struct SignIn: View {
                     Button(action:
                             {
                         login()
+                       
                     }, label: {
                         Text("Sign In")
                             .foregroundStyle(.black)
                         
                     })
-                    
                     .frame(maxWidth: .infinity)
                     .padding(16)
                     .background(Color.mygreen)
@@ -82,6 +76,7 @@ struct SignIn: View {
                                 dismiss()
                             }
                         }
+                        .foregroundStyle(Color.mygreen)
                     }
                     .frame(maxWidth: .infinity)
                     .padding(.top, 45)
@@ -127,6 +122,7 @@ struct SignIn: View {
                 AuthService.shared.loggedIn = true
                 networking = false
                 dismiss()
+               
             } catch {
                 networking = false
                 print(error)
@@ -139,5 +135,6 @@ struct SignIn: View {
 
 #Preview {
     SignIn()
+   
 }
 

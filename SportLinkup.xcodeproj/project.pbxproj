@@ -49,8 +49,8 @@
 		D24CBB842B3D3B2A006EB25F /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */; };
 		D24D587C2B3D75ED00F65EFF /* ActivitieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */; };
 		D24D587E2B3D889E00F65EFF /* ActivitieDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */; };
+		D27E0C422B44976600211848 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = D27E0C412B44976600211848 /* Localizable.xcstrings */; };
 		D2E9009B2B3F1C8E003C860A /* BookingTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */; };
-		D2E9009F2B3F2FFD003C860A /* PopupDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */; };
 		D2E900A12B3F57CC003C860A /* BookingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A02B3F57CC003C860A /* BookingViewModel.swift */; };
 		D2E900A32B3F61B5003C860A /* BookingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */; };
 		D2E900A72B3F8B3D003C860A /*  SportPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E900A62B3F8B3D003C860A /*  SportPin.swift */; };
@@ -101,8 +101,8 @@
 		D24CBB832B3D3B2A006EB25F /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
 		D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetailsView.swift; sourceTree = "<group>"; };
 		D24D587D2B3D889E00F65EFF /* ActivitieDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitieDetails.swift; sourceTree = "<group>"; };
+		D27E0C412B44976600211848 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		D2E9009A2B3F1C8E003C860A /* BookingTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingTicket.swift; sourceTree = "<group>"; };
-		D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupDetailsView.swift; sourceTree = "<group>"; };
 		D2E900A02B3F57CC003C860A /* BookingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModel.swift; sourceTree = "<group>"; };
 		D2E900A22B3F61B5003C860A /* BookingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSummaryView.swift; sourceTree = "<group>"; };
 		D2E900A62B3F8B3D003C860A /*  SportPin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = " SportPin.swift"; sourceTree = "<group>"; };
@@ -139,6 +139,7 @@
 		D2417A472B396D2600D89723 /* SportLinkup */ = {
 			isa = PBXGroup;
 			children = (
+				D27E0C412B44976600211848 /* Localizable.xcstrings */,
 				D2417A482B396D2600D89723 /* SportLinkupApp.swift */,
 				D2417A4A2B396D2600D89723 /* ContentView.swift */,
 				D2417A9E2B3AF4E700D89723 /* Authentication */,
@@ -179,7 +180,6 @@
 				D2417A5F2B396DB200D89723 /* SearchView.swift */,
 				D2417A612B396DB200D89723 /* PlacesView.swift */,
 				D2417A602B396DB200D89723 /* DetailsView.swift */,
-				D2E9009E2B3F2FFD003C860A /* PopupDetailsView.swift */,
 				D24CBB812B3D39CE006EB25F /* ActivitiesView.swift */,
 				D24D587B2B3D75ED00F65EFF /* ActivitieDetailsView.swift */,
 				D2417A6F2B39703100D89723 /* BookingView.swift */,
@@ -323,6 +323,7 @@
 			files = (
 				D2417A502B396D2800D89723 /* Preview Assets.xcassets in Resources */,
 				D2417A4D2B396D2800D89723 /* Assets.xcassets in Resources */,
+				D27E0C422B44976600211848 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +355,6 @@
 				D2417A762B399C9F00D89723 /* Time.swift in Sources */,
 				D2417A652B396DB200D89723 /* PlacesView.swift in Sources */,
 				D2417A972B3AC3FE00D89723 /* Sport.swift in Sources */,
-				D2E9009F2B3F2FFD003C860A /* PopupDetailsView.swift in Sources */,
 				D2417A7E2B3ABC1D00D89723 /* User.swift in Sources */,
 				D2417A6E2B396DBB00D89723 /* CardExplore.swift in Sources */,
 				D2417A8B2B3ABDC900D89723 /* CardView.swift in Sources */,
@@ -525,7 +525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aljwhra.SportLinkup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aljwhra.SportLinkup1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -554,7 +554,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aljwhra.SportLinkup;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Aljwhra.SportLinkup1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -9,13 +9,13 @@ import SwiftUI
 
 struct MyBookingView: View {
     
-    
+    @Environment(\.dismiss) var dismiss
     @State private var sports: [Sport] = []
     @State private var tickets: [BookingTicket] = []
     var body: some View {
         
      
-        ScrollView{
+        ScrollView(showsIndicators: false){
     
                 ForEach(tickets) { ticket in
                     
@@ -68,9 +68,17 @@ struct MyBookingView: View {
                     .padding(.top,10)
                 }
                 
-           
-            .navigationTitle("My Booking")
-            .navigationBarBackButtonHidden(false)
+                .navigationTitle("My Booking")
+                .navigationBarBackButtonHidden(true)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                        Button(action: { dismiss() }) {
+                            Image(systemName: "chevron.left")
+                                .foregroundColor( Color.primary)
+                                .flipsForRightToLeftLayoutDirection(true)
+                        }
+                    }
+                }
         }
         .onAppear{
             fetchSports()

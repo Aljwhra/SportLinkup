@@ -106,7 +106,7 @@ struct ActivitieDetailsView: View {
             .frame(width: 350,alignment: .leading)
             .padding(.top)
             
-            ScrollView {
+            ScrollView(showsIndicators: false){
                 
                 ForEach(vm.activitie){ act in
                     if act.id == activitieID {

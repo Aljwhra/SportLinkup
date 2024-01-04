@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
-    //    @StateObject private var vm = ProfileViewViewModel()
+ 
     @Environment(\.colorScheme) var colorScheme
     
     @ObservedObject var auth = AuthService.shared

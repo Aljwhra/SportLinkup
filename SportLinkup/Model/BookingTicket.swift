@@ -1,25 +1,3 @@
-////
-////  BookingTicket.swift
-////  SportLinkup
-////
-////  Created by Aljwhra Alnasser on 29/12/2023.
-////
-//
-//import Foundation
-//
-//struct BookingTicket: Identifiable , Codable {
-//    
-//    var id = UUID()
-//    var idSport: UUID
-//    var idUser: UUID
-//    var numPlayers: Int
-//    var time: String
-//    var date: Date
-//    var price: Int
-//   
-//    
-//}
-
 //
 //  BookingTicket.swift
 //  SportLinkup
@@ -56,7 +34,6 @@ struct BookingTicket: Identifiable , Codable {
         self.idUser = try container.decode(Int.self, forKey: .idUser)
         self.numPlayers = try container.decode(Int.self, forKey: .numPlayers)
         self.time = try container.decode(String.self, forKey: .time)
-//        self.date = try container.decode(Date.self, forKey: .date)
         self.price = try container.decode(String.self, forKey: .price)
         let dateString = try container.decode(String.self, forKey: .date)
         let dateFormatter = DateFormatter()
@@ -85,3 +62,4 @@ struct BookingTicket: Identifiable , Codable {
         try container.encode(self.price, forKey: .price)
     }
 }
+

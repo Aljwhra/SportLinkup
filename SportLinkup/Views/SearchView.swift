@@ -21,7 +21,7 @@ struct SearchView: View {
             VStack{
           
                 
-                List {
+                ScrollView(showsIndicators: false){
                     ForEach(filtered) { sport in
                         NavigationLink(
                             destination: DetailsView(sportTitle: sport.typesport, sportId:sport.id),
@@ -32,7 +32,6 @@ struct SearchView: View {
                     }
                     
                 }
-                .listStyle(.plain)
                 .searchable(text: $searchText)
                 .onChange(of: searchText) { oldValue, newValue in
                     filtered = sports.filter {

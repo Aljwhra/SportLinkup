@@ -14,7 +14,6 @@ struct User: Codable, Identifiable {
     let name: String
     let uid: String
     let dob: Date
-   
     let email: String
     let mobile: String
     
